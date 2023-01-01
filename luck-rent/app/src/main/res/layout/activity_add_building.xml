@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.property.AddBuilding">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/topBar"
+                        layout="@layout/top_bar" />
+
+
+                </RelativeLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/topBar"
+                    android:fadeScrollbars="false"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Address"
+                            android:textColor="@color/blue" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvAddress"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_edit">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/etAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/blue" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPostal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlAddress"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Postal Code"
+                            android:textColor="@color/blue" />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPostalCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvPostal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_edit"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="text"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/blue" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNotes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etPostalCode"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Building Notes"
+                            android:textColor="@color/blue" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etBuildingNotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_below="@+id/tvNotes"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_signature"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="top"
+                            android:inputType="text"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            android:paddingVertical="@dimen/_20sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAmenities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/etBuildingNotes"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Building Amenities"
+                            android:textColor="@color/orange"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvAmenities" />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnAddOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_below="@+id/recycler"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginVertical="@dimen/_10sdp"
+                            android:background="@drawable/roundbutton"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingHorizontal="@dimen/_20sdp"
+                            android:text="Add Other Amenities"
+                            android:textColor="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btSave"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_below="@+id/btnAddOther"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            android:background="@drawable/roundbutton"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Save"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+                </ScrollView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+</layout>

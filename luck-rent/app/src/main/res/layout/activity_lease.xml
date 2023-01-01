@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/contentLease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/F2White"
+        android:elevation="@dimen/_100sdp"
+        tools:context=".ui.main.property.LeaseActivity">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/rlSecond"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <RelativeLayout
+                                android:id="@+id/rlAbove"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@color/white"
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:paddingVertical="@dimen/_10sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/startDateTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Start Date"
+                                    android:textColor="@color/blue" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlStart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/startDateTV"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvStartDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:textColor="@color/blue" />
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/endDateTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rlStart"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="End Date"
+                                    android:textColor="@color/blue" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlEnd"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/endDateTV"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvEndDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:textColor="@color/blue" />
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRentLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rlEnd"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Rent Amount"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etRent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvRentLabel"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRentFrequencyLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etRent"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Rent Frequency"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llRentFrequency"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@id/tvRentFrequencyLabel"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                            android:id="@+id/spRentFrequency"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="@dimen/_6sdp"
+                                            android:layout_marginRight="@dimen/_6sdp"
+                                            android:background="@android:color/transparent"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:singleLine="true"
+                                            android:textSize="@dimen/_13sdp"
+                                            app:ms_background_color="@android:color/transparent"
+                                            app:ms_hide_arrow="true"
+                                            app:ms_hint_color="@color/blue"
+                                            app:ms_padding_left="@dimen/_12sdp"
+                                            app:ms_padding_right="@dimen/_5sdp"
+                                            app:ms_popup_padding_left="@dimen/_8sdp"
+                                            app:ms_popup_padding_right="@dimen/_13sdp"
+                                            app:ms_popup_padding_top="@dimen/_3sdp"
+                                            app:ms_text_color="@color/blue" />
+
+                                        <LinearLayout
+                                            android:id="@+id/rentFrequencyArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:paddingLeft="@dimen/_15sdp"
+                                                android:paddingRight="@dimen/_15sdp"
+                                                android:src="@drawable/ic_blue_arrow" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvRentDueDateLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/llRentFrequency"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Rent Due Date"
+                                    android:textColor="@color/blue" />
+
+                                <RelativeLayout
+                                    android:id="@+id/rlRentDueDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvRentDueDateLabel"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRentDueDate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:textColor="@color/blue" />
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPriorityLabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rlRentDueDate"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Prorated First Payment"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llChoose0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:layout_below="@+id/tvPriorityLabel"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <RadioGroup
+                                        android:id="@+id/rgYesNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:contentDescription="Layouts"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RadioButton
+                                            android:id="@+id/btnYes"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:buttonTint="@color/darkBlue"
+                                            android:text="Yes"
+                                            android:textColor="@color/mediumSand"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <RadioButton
+                                            android:id="@+id/btnNo"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:buttonTint="@color/mediumSand"
+                                            android:text="No"
+                                            android:textColor="@color/mediumSand"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </RadioGroup>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAutoAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/llChoose0"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="$ 1500.00"
+                                    android:textColor="@color/blue"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvUtility"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvAutoAmount"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Utility Share"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tvUtilityShares"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvUtility"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/securityDepositTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvUtilityShares"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Security Deposit $"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/securityDepositET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/securityDepositTV"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/petDepositTV"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/securityDepositET"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Pet Deposit $"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/petDepositET"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/petDepositTV"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLateFee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/petDepositET"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Late Fee $"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etLateFee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvLateFee"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/rlChoose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_23sdp"
+                                    android:layout_below="@+id/etLateFee"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <RadioGroup
+                                        android:id="@+id/firstRg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="@dimen/_3sdp"
+                                        android:contentDescription="Layouts"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RadioButton
+                                            android:id="@+id/btnRevenue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:buttonTint="@color/darkBlue"
+                                            android:checked="true"
+                                            android:text="Renew Lease"
+                                            android:textColor="@color/mediumSand"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <RadioButton
+                                            android:id="@+id/btnNew"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:buttonTint="@color/mediumSand"
+                                            android:text="New Lease"
+                                            android:textColor="@color/mediumSand"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </RadioGroup>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <RelativeLayout
+                                    android:id="@+id/reminderLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_below="@+id/rlChoose"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp">
+
+                                    <TextView
+                                        android:id="@+id/remindersTV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_20sdp"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:text="Reminders"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/renewalTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/remindersTV"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Lease renewal days before expired"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/renewalLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/renewalTV"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spRenewal"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/renewalArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_blue_arrow" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/rentIncreaseTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/renewalLayout"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Rent increase notice days before due"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/rentIncreaseLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/rentIncreaseTV"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spRentIncrease"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/rentIncreaseArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_blue_arrow" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/rentOverdueTV"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rentIncreaseLayout"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Rent overdue notice after due"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/rentOverdueLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/rentOverdueTV"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spRentOverdue"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/rentOverdueArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_blue_arrow" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+
+                            <!--                                <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                    android:id="@+id/tvPropertyLabel"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    android:layout_below="@+id/etUnit"-->
+                            <!--                                    android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                    android:fontFamily="@font/poppins_regular"-->
+                            <!--                                    android:paddingStart="@dimen/_25sdp"-->
+                            <!--                                    android:text="Property"-->
+                            <!--                                    android:textColor="@color/darkBlue"-->
+                            <!--                                    android:textSize="@dimen/_10sdp" />-->
+
+                            <!--                                <RelativeLayout-->
+                            <!--                                    android:id="@+id/rlProper"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="@dimen/_40sdp"-->
+                            <!--                                    android:layout_below="@+id/tvPropertyLabel"-->
+                            <!--                                    android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                    android:background="@drawable/bg_edit">-->
+
+                            <!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                        android:id="@+id/tvProperty"-->
+                            <!--                                        android:layout_width="match_parent"-->
+                            <!--                                        android:layout_height="match_parent"-->
+                            <!--                                        android:layout_centerVertical="true"-->
+                            <!--                                        android:drawableEnd="@drawable/ic_blue_arrow"-->
+                            <!--                                        android:fontFamily="@font/poppins_regular"-->
+                            <!--                                        android:gravity="center_vertical"-->
+                            <!--                                        android:paddingStart="@dimen/_20sdp"-->
+                            <!--                                        android:paddingLeft="@dimen/_15sdp"-->
+                            <!--                                        android:paddingRight="@dimen/_15sdp"-->
+                            <!--                                        android:textColor="@color/blue"-->
+                            <!--                                        android:textSize="@dimen/_12sdp" />-->
+                            <!--                                </RelativeLayout>-->
+
+                            <!--                            </RelativeLayout>-->
+
+                            <!--                            <RelativeLayout-->
+                            <!--                                android:id="@+id/rlRecycler"-->
+                            <!--                                android:layout_width="@dimen/_150sdp"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_below="@id/rlProperty"-->
+                            <!--                                android:layout_alignParentRight="true"-->
+                            <!--                                android:layout_marginHorizontal="@dimen/_20sdp"-->
+                            <!--                                android:background="@drawable/bg_lease"-->
+                            <!--                                android:elevation="@dimen/_100sdp"-->
+                            <!--                                android:gravity="center"-->
+                            <!--                                android:visibility="gone">-->
+
+                            <!--                                <androidx.recyclerview.widget.RecyclerView-->
+                            <!--                                    android:id="@+id/rvProperty"-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    android:layout_marginLeft="@dimen/_15sdp" />-->
+                            <!--                            </RelativeLayout>-->
+
+
+                            <!--                            <androidx.appcompat.widget.AppCompatTextView-->
+                            <!--                                android:id="@+id/tvLease"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_below="@id/rlProperty"-->
+                            <!--                                android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                android:fontFamily="@font/poppins_medium"-->
+                            <!--                                android:text="Categories"-->
+                            <!--                                android:textColor="@color/sand"-->
+                            <!--                                android:textSize="@dimen/_13sdp" />-->
+
+                            <!--                            <androidx.appcompat.widget.LinearLayoutCompat-->
+                            <!--                                android:id="@+id/llLease"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="match_parent"-->
+                            <!--                                android:layout_below="@id/tvLease"-->
+                            <!--                                android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                android:orientation="horizontal"-->
+                            <!--                                android:weightSum="1">-->
+
+                            <!--                                <RelativeLayout-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content">-->
+
+                            <!--                                    <androidx.appcompat.widget.LinearLayoutCompat-->
+                            <!--                                        android:id="@+id/rlLease"-->
+                            <!--                                        android:layout_width="match_parent"-->
+                            <!--                                        android:layout_height="wrap_content"-->
+                            <!--                                        android:layout_marginStart="@dimen/_10sdp"-->
+                            <!--                                        android:layout_marginEnd="@dimen/_10sdp"-->
+                            <!--                                        android:gravity="center"-->
+                            <!--                                        android:orientation="vertical">-->
+
+
+                            <!--                                        <RadioButton-->
+                            <!--                                            android:id="@+id/btnLeaseExhibits"-->
+                            <!--                                            android:layout_width="match_parent"-->
+                            <!--                                            android:layout_height="@dimen/_30sdp"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:buttonTint="@color/darkBlue"-->
+                            <!--                                            android:checked="true"-->
+                            <!--                                            android:text="@string/leases_exhibits"-->
+                            <!--                                            android:textColor="@color/mediumSand"-->
+                            <!--                                            android:textSize="@dimen/_12sdp" />-->
+
+                            <!--                                        <RadioButton-->
+                            <!--                                            android:id="@+id/btnAppsCredit"-->
+                            <!--                                            android:layout_width="match_parent"-->
+                            <!--                                            android:layout_height="match_parent"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:buttonTint="@color/darkBlue"-->
+                            <!--                                            android:text="Application &amp; Credit Checks"-->
+                            <!--                                            android:textColor="@color/mediumSand"-->
+                            <!--                                            android:textSize="@dimen/_12sdp" />-->
+
+                            <!--                                        <RadioButton-->
+                            <!--                                            android:id="@+id/btnNotice"-->
+                            <!--                                            android:layout_width="match_parent"-->
+                            <!--                                            android:layout_height="match_parent"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:buttonTint="@color/darkBlue"-->
+                            <!--                                            android:text="Notices &amp; Correspondence"-->
+                            <!--                                            android:textColor="@color/mediumSand"-->
+                            <!--                                            android:textSize="@dimen/_12sdp" />-->
+
+                            <!--                                        <RadioButton-->
+                            <!--                                            android:id="@+id/btnMovieIn"-->
+                            <!--                                            android:layout_width="match_parent"-->
+                            <!--                                            android:layout_height="match_parent"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:buttonTint="@color/darkBlue"-->
+                            <!--                                            android:text="Move.In/Out Inspections"-->
+                            <!--                                            android:textColor="@color/mediumSand"-->
+                            <!--                                            android:textSize="@dimen/_12sdp" />-->
+
+                            <!--                                        <RadioButton-->
+                            <!--                                            android:id="@+id/btnEviction"-->
+                            <!--                                            android:layout_width="match_parent"-->
+                            <!--                                            android:layout_height="match_parent"-->
+                            <!--                                            android:layout_weight="1"-->
+                            <!--                                            android:buttonTint="@color/darkBlue"-->
+                            <!--                                            android:text="Eviction &amp; Legal Docs"-->
+                            <!--                                            android:textColor="@color/mediumSand"-->
+                            <!--                                            android:textSize="@dimen/_12sdp" />-->
+
+
+                            <!--                                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                            <!--                                </RelativeLayout>-->
+                            <!--                            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+                            <!--                            <androidx.cardview.widget.CardView-->
+                            <!--                                android:id="@+id/cvUploadFiles"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_below="@id/leaseFragment"-->
+                            <!--                                android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                app:cardBackgroundColor="@color/bgWhite"-->
+                            <!--                                app:cardCornerRadius="@dimen/_10sdp"-->
+                            <!--                                app:cardElevation="0dp">-->
+
+                            <!--                                <RelativeLayout-->
+                            <!--                                    android:layout_width="match_parent"-->
+                            <!--                                    android:layout_height="wrap_content"-->
+                            <!--                                    android:gravity="center">-->
+
+                            <!--                                    <androidx.recyclerview.widget.RecyclerView-->
+                            <!--                                        android:id="@+id/rvPhotos"-->
+                            <!--                                        android:layout_marginTop="@dimen/_20sdp"-->
+                            <!--                                        android:layout_width="match_parent"-->
+                            <!--                                        android:layout_height="wrap_content"-->
+                            <!--                                        android:padding="@dimen/_2sdp" />-->
+
+                            <!--                                    <androidx.appcompat.widget.AppCompatButton-->
+                            <!--                                        android:id="@+id/btnUploadFiles"-->
+                            <!--                                        android:layout_width="match_parent"-->
+                            <!--                                        android:layout_height="@dimen/_40sdp"-->
+                            <!--                                        android:layout_below="@id/rvPhotos"-->
+                            <!--                                        android:layout_marginLeft="@dimen/_40sdp"-->
+                            <!--                                        android:layout_marginTop="@dimen/_10sdp"-->
+                            <!--                                        android:layout_marginRight="@dimen/_40sdp"-->
+                            <!--                                        android:layout_marginBottom="@dimen/_15sdp"-->
+                            <!--                                        android:background="@drawable/roundbutton"-->
+                            <!--                                        android:padding="@dimen/_5sdp"-->
+                            <!--                                        android:text="Upload Files"-->
+                            <!--                                        android:textAllCaps="true"-->
+                            <!--                                        android:textColor="@color/white"-->
+                            <!--                                        android:textSize="@dimen/_13sdp" />-->
+                            <!--                                </RelativeLayout>-->
+
+                            <!--                            </androidx.cardview.widget.CardView>-->
+
+                            <RelativeLayout
+                                android:id="@+id/rlProperty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rlAbove"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlAutoGenerate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_25sdp"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvAutoGenerateRentInvoices"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Auto Generate Future\nRent Invoices"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <com.example.luck_rent_android.utils.EasyToggle
+                                        android:id="@+id/easyToggleRentInvoices"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        app:etBgOnColor="@color/orange" />
+
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnAddPayment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/rlAutoGenerate"
+                                    android:layout_marginLeft="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:layout_marginRight="@dimen/_20sdp"
+                                    android:layout_marginBottom="@dimen/_15sdp"
+                                    android:background="@drawable/roundbutton"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="Mark Past Payments As Paid"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/btnAddPayment"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="@dimen/_10sdp"
+                                    android:weightSum="1">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnEndLease"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/rlUtilityShares"
+                                        android:layout_margin="@dimen/_2sdp"
+                                        android:layout_weight=".5"
+                                        android:background="@drawable/roundbutton"
+                                        android:text="End Lease"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnSave"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/rlUtilityShares"
+                                        android:layout_margin="@dimen/_2sdp"
+                                        android:layout_marginStart="@dimen/_7sdp"
+                                        android:layout_weight=".5"
+                                        android:background="@drawable/roundbutton"
+                                        android:text="Save"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13sdp" />
+
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+</layout>

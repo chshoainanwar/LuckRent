@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF914D</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgWhite">#F9F9F9</color>
+    <color name="white38">#61F9F9F9</color>
+    <color name="blue">#09427D</color>
+    <color name="grey">#666666</color>
+    <color name="Lightgrey">#AEADAD</color>
+    <color name="orange">#FF914D</color>
+    <color name="light_orange1">#F8DFCF</color>
+    <color name="darkBlue">#06325F</color>
+    <color name="purple">#415194</color>
+    <color name="blueBtn">#01A1D6</color>
+    <color name="lightPurple">#9AA4D3</color>
+    <color name="lightPurple2">#09427D</color>
+    <color name="red">#FFBF0B0B</color>
+    <color name="red1">#FB3030</color>
+    <color name="lightRed">#FF2424</color>
+    <color name="yellow">#F4D81D</color>
+    <color name="sand">#737373</color>
+    <color name="pink">#F983B8</color>
+    <color name="txt_color">#505050</color>
+    <color name="sandWhite">#F9F9F9</color>
+    <color name="hardSand">#858585</color>
+    <color name="mediumSand">#969696</color>
+    <color name="lightBlue">#B8DBFF</color>
+    <color name="lightYellow">#E7F179</color>
+    <color name="mediumPurple">#5283FF</color>
+    <color name="mediumRed">#FF6B6B</color>
+    <color name="reminder">#535353</color>
+    <color name="shadow_view_foreground_color_light">#33ffffff</color>
+    <color name="shadow_view_default_shadow_color">#DCDDE0</color>
+    <color name="shadow_view_foreground_color_dark">#1f000000</color>
+    <color name="darkSand">#313233</color>
+    <color name="F2White">#F2F2F2</color>
+    <color name="bgColor">#E5E5E5</color>
+    <color name="light_orange">#FF914D</color>
+    <color name="light_red">#FF5151</color>
+    <color name="light_blue">#4366F0</color>
+    <color name="dark_green">#00CD68</color>
+
+    <color name="bg_text">#5A5A5A</color>
+
+    <color name="f3White">#F3F3F3</color>
+    <color name="lineColor">#ECECEC</color>
+    <color name="line_color">#E8E8E8</color>
+    <color name="chat_bg">#EFF1F5</color>
+    <color name="rent_balance">#F24369</color>
+    <color name="invoice">#4DE4E1</color>
+    <color name="tax_preparation">#4F4ADB</color>
+    <color name="rent_rolls">#FB56E0</color>
+    <color name="bg_income">#F6F6F6</color>
+    <color name="cashflow_reports">#58CC00</color>
+    <color name="green">#00E775</color>
+    <color name="dark_yellow">#F6A725</color>
+    <color name="faWhite">#FAFAFA</color>
+    <color name="white_76">#C2FFFFFF</color>
+    <color name="blue_bar">#B8DBFF</color>
+    <color name="pink_bar">#FFC3BD</color>
+    <color name="yellow_bar">#E7F179</color>
+    <color name="radio_color">#BFBFBF</color>
+
+
+</resources>

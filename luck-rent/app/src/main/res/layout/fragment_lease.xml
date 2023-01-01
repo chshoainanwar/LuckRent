@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.renter.LeaseFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:src="@drawable/ic_circle" />-->
+
+                <TextView
+                    android:id="@+id/BasicInfoTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Lease"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/leaseLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/BasicInfoTV"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/startDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Start Date"
+                        android:textColor="@color/blue" />
+                    <RelativeLayout
+                        android:id="@+id/rlStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/startDateTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:textColor="@color/blue" />
+                    </RelativeLayout>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/endDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlStart"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="End Date"
+                        android:textColor="@color/blue" />
+                    <RelativeLayout
+                        android:id="@+id/rlEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/endDateTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:textColor="@color/blue" />
+                    </RelativeLayout>
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:id="@+id/endDateLayout"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="@dimen/_40sdp"-->
+                    <!--                        android:layout_below="@+id/endDateTV"-->
+                    <!--                        android:layout_centerInParent="true"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:background="@drawable/bg_edit"-->
+                    <!--                        android:paddingStart="@dimen/_20sdp"-->
+                    <!--                        android:paddingEnd="@dimen/_20sdp">-->
+
+                    <!--                        <Spinner-->
+                    <!--                            android:id="@+id/endDateSpinner"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:fontFamily="@font/poppins_regular"-->
+                    <!--                            android:textColor="@color/blue" />-->
+                    <!--                    </RelativeLayout>-->
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rentTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlEnd"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Rent $"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/rentET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/rentTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUtility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rentET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Utility Share"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tvUtilityShares"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/tvUtility"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/securityDepositTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUtilityShares"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Security Deposit $"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/securityDepositET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/securityDepositTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/petDepositTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/securityDepositET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Pet Deposit $"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/petDepositET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/petDepositTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rentDueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/petDepositET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Monthly Rent Due Date"
+                        android:textColor="@color/blue" />
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:id="@+id/rentDueLayout"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="@dimen/_40sdp"-->
+                    <!--                        android:layout_below="@+id/rentDueTV"-->
+                    <!--                        android:layout_centerInParent="true"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:background="@drawable/bg_edit"-->
+                    <!--                        android:paddingStart="@dimen/_20sdp"-->
+                    <!--                        android:paddingEnd="@dimen/_20sdp">-->
+
+                    <!--                        <Spinner-->
+                    <!--                            android:id="@+id/rentDueSpinner"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:fontFamily="@font/poppins_regular"-->
+                    <!--                            android:textColor="@color/blue" />-->
+                    <!--                    </RelativeLayout>-->
+
+
+                    <!--                    <RelativeLayout-->
+                    <!--                        android:id="@+id/rlMonthlyDue"-->
+                    <!--                        android:layout_below="@+id/rentDueTV"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="@dimen/_40sdp"-->
+                    <!--                        android:layout_marginTop="@dimen/_10sdp"-->
+                    <!--                        android:background="@drawable/bg_edit">-->
+
+                    <!--                        <androidx.appcompat.widget.AppCompatTextView-->
+                    <!--                            android:id="@+id/tvDueMonthlyDate"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_centerVertical="true"-->
+                    <!--                            android:fontFamily="@font/poppins_regular"-->
+                    <!--                            android:inputType="number"-->
+                    <!--                            android:paddingStart="@dimen/_20sdp"-->
+                    <!--                            android:textColor="@color/blue" />-->
+                    <!--                    </RelativeLayout>-->
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:id="@+id/rentDueLayout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_40sdp"
+                                            android:layout_below="@id/rentDueTV"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:background="@drawable/bg_edit"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <RelativeLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                    android:id="@+id/spRentDue"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="@dimen/_6sdp"
+                                                    android:layout_marginTop="@dimen/_2sdp"
+                                                    android:layout_marginRight="@dimen/_6sdp"
+                                                    android:layout_marginBottom="@dimen/_2sdp"
+                                                    android:background="@android:color/transparent"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:textSize="@dimen/_13sdp"
+                                                    app:ms_background_color="@android:color/transparent"
+                                                    app:ms_hide_arrow="true"
+                                                    app:ms_hint_color="@color/blue"
+                                                    app:ms_padding_left="@dimen/_12sdp"
+                                                    app:ms_padding_right="@dimen/_5sdp"
+                                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                                    app:ms_text_color="@color/blue" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/rentDueArrow"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true">
+
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:paddingLeft="@dimen/_15sdp"
+                                                        android:paddingRight="@dimen/_15sdp"
+                                                        android:src="@drawable/ic_blue_arrow" />
+
+                                                </LinearLayout>
+
+                                            </RelativeLayout>
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/reminderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/leaseLayout"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/remindersTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:text="Reminders"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/renewalTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/remindersTV"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Lease renewal days before expired"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/renewalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/renewalTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spRenewal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/renewalArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rentIncreaseTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/renewalLayout"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Rent increase notice days before due"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rentIncreaseLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/rentIncreaseTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spRentIncrease"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/rentIncreaseArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rentOverdueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rentIncreaseLayout"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Rent overdue notice after due"
+                        android:textColor="@color/blue" />
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rentOverdueLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/rentOverdueTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spRentOverdue"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/rentOverdueArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ShadowLayout">
+        <attr name="android:foreground" />
+        <attr name="shadowMargin" format="dimension" />
+        <attr name="shadowMarginTop" format="dimension" />
+        <attr name="shadowMarginLeft" format="dimension" />
+        <attr name="shadowMarginRight" format="dimension" />
+        <attr name="shadowMarginBottom" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="cornerRadiusTL" format="dimension" />
+        <attr name="cornerRadiusTR" format="dimension" />
+        <attr name="cornerRadiusBL" format="dimension" />
+        <attr name="cornerRadiusBR" format="dimension" />
+        <attr name="foregroundColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowDx" format="float" />
+        <attr name="shadowDy" format="float" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowLayout_Layout">
+        <attr name="layout_gravity" format="enum" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SpinnerTextView">
+        <attr name="dropdown_max_height" format="dimension|reference" />
+        <attr name="dropdown_item_height" format="dimension|reference" />
+        <attr name="arrow_icon" format="integer|reference" />
+        <attr name="collapse_item_display_background" format="integer|reference" />
+        <attr name="expand_item_display_background" format="integer|reference" />
+        <attr name="drop_down_list_background" format="integer|reference" />
+        <attr name="hint_text_enable" format="boolean|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="EasyToggle">
+
+        <attr name="etLength" format="dimension" />
+
+        <attr name="etRadius" format="dimension" />
+
+        <attr name="etRange" format="dimension" />
+
+        <attr name="etBgOffColor" format="color" />
+
+        <attr name="etBgOnColor" format="color" />
+
+        <attr name="etBgStrokeWidth" format="dimension" />
+
+        <attr name="etBgTopColor" format="color" />
+
+        <attr name="etButtonColor" format="color" />
+
+        <attr name="etButtonStrokeColor" format="color" />
+
+        <attr name="etButtonStrokeWidth" format="dimension" />
+
+        <attr name="etShadowOffsetY" format="dimension" />
+
+    </declare-styleable>
+</resources>

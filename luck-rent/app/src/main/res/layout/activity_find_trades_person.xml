@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.findtradesperson.FIndTradesPerson">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dashboardDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/topBar"
+                android:fadeScrollbars="false"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Location"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/spLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/tvLocation"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/locationArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_arrow_add" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTypes"
+                        android:layout_below="@+id/spLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Types"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/spLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/tvTypes"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spTypes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/typeArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_arrow_add" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/dashboardNavView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:visibility="gone">
+
+            <include
+
+                android:id="@+id/dashboardNavMenuLayout"
+                layout="@layout/side_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.renter.RentPaymentFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:src="@drawable/ic_circle" />-->
+
+                <TextView
+                    android:id="@+id/rentPaymentTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Rent Payment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rentPaymentTV"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/paymentMethodTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Payment Method"
+                        android:textColor="@color/blue" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/paymentMethodLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/paymentMethodTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spPaymentMethod"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/paymentMethodArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/receiveChequeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/paymentMethodLayout"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Received Cheques up to"
+                        android:textColor="@color/blue" />
+
+
+<!--                   <RelativeLayout-->
+<!--                        android:id="@+id/rlReminder"-->
+<!--                        android:layout_below="@+id/receiveChequeTV"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/_40sdp"-->
+<!--                        android:layout_marginTop="@dimen/_10sdp"-->
+<!--                        android:background="@drawable/bg_edit">-->
+
+<!--                       <androidx.appcompat.widget.AppCompatTextView-->
+<!--                           android:id="@+id/tvReminder"-->
+<!--                           android:layout_width="match_parent"-->
+<!--                           android:layout_height="wrap_content"-->
+<!--                           android:layout_centerVertical="true"-->
+<!--                           android:fontFamily="@font/poppins_regular"-->
+<!--                           android:inputType="number"-->
+<!--                           android:paddingStart="@dimen/_20sdp"-->
+<!--                           android:textColor="@color/blue" />-->
+<!--                   </RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:id="@+id/rlReminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/receiveChequeTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDatePicker"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingStart="@dimen/_20sdp"
+                            android:textColor="@color/bg_text"
+                            android:textColorHint="@color/blue" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:paddingRight="@dimen/_15sdp"
+                            android:src="@drawable/ic_calender" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/remindChequeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlReminder"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Reminder for Cheques"
+                        android:textColor="@color/blue" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/remindChequeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/remindChequeTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spRemindCheque"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/remindChequeArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <RelativeLayout
+                        android:id="@+id/rlAutoInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_below="@id/remindChequeLayout"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAutoInvoices"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Auto Generate Future \nRent Invoices"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.example.luck_rent_android.utils.EasyToggle
+                            android:id="@+id/easyToggleAutoInvoices"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            app:etBgOnColor="@color/orange" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPastRent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_below="@id/rlAutoInvoice"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_25sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPastRent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Mark All Past Rent \nAs Paid"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.example.luck_rent_android.utils.EasyToggle
+                            android:id="@+id/easyTogglePastRent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            app:etBgOnColor="@color/orange" />
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/rentPaymentDescTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlPastRent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="@string/rent_payment_text"
+                        android:textColor="@color/black" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/saveBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/rentPaymentDescTV"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:background="@drawable/roundbutton"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:text="Save"
+                        android:textColor="@color/white" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

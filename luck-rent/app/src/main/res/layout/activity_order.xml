@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.order.OrderActivity">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+                <RelativeLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/topBar"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+                        android:id="@+id/buttonGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:elevation="2dp"
+                        android:background="@color/white"
+                        app:position="0"
+                        app:radius="30dp"
+                        app:rippleColor="@color/black"
+                        app:selectedBackground="@color/orange"
+                        app:selectedBorderColor="@color/orange"
+                        app:selectedBorderWidth="2dp"
+                        app:selectedButtonRadius="30dp"
+                        app:selectionAnimationDuration="500">
+
+                        <com.addisonelliott.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            app:selectedTextColor="@color/white"
+                            app:text="Subscription"
+                            app:textStyle="bold"
+                            app:textColor="@color/bg_text"
+                            app:textSize="14sp" />
+
+                        <com.addisonelliott.segmentedbutton.SegmentedButton
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            app:selectedTextColor="#FFFFFF"
+                            app:text="Pay-Per-Use"
+                            app:textStyle="bold"
+                            app:textColor="@color/bg_text"
+                            app:textSize="14sp" />
+
+                    </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/buttonGroup"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rlSubscription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLandLord"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Subscribe to manage more Properties"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:singleLine="true"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSelect"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvLandLord"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Select Your Role"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/spLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@id/tvSelect"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                            android:id="@+id/spRole"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="@dimen/_6sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:layout_marginRight="@dimen/_6sdp"
+                                            android:layout_marginBottom="@dimen/_2sdp"
+                                            android:background="@android:color/transparent"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:singleLine="true"
+                                            android:textSize="@dimen/_13sdp"
+                                            app:ms_background_color="@android:color/transparent"
+                                            app:ms_hide_arrow="true"
+                                            app:ms_hint="Select Your Role"
+                                            app:ms_hint_color="@color/blue"
+                                            app:ms_padding_left="@dimen/_12sdp"
+                                            app:ms_padding_right="@dimen/_5sdp"
+                                            app:ms_popup_padding_left="@dimen/_8sdp"
+                                            app:ms_popup_padding_right="@dimen/_13sdp"
+                                            app:ms_popup_padding_top="@dimen/_3sdp"
+                                            app:ms_text_color="@color/blue" />
+
+                                        <LinearLayout
+                                            android:id="@+id/roleArrow"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentRight="true">
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:paddingLeft="@dimen/_15sdp"
+                                                android:paddingRight="@dimen/_15sdp"
+                                                android:src="@drawable/ic_arrow_add" />
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTotalUnit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/spLayout"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Total Unit"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etTotalUnit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvTotalUnit"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="number"
+                                    android:hint="2"
+                                    android:textColorHint="@color/blue"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPricePerUnit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etTotalUnit"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Monthly Subscription Fee"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etPricePerUnit"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvPricePerUnit"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:hint="$12.5 for 4 units"
+                                    android:textColorHint="@color/blue"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnSubscribe"
+                                    android:layout_width="@dimen/_130sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/etPricePerUnit"
+                                    android:layout_marginVertical="@dimen/_30sdp"
+                                    android:background="@drawable/roundbutton"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Subscribe"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white" />
+
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlPayPerUse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rlSubscription"
+                                android:layout_marginTop="@dimen/_20sdp">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    tools:listitem="@layout/reports_item" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+</layout>

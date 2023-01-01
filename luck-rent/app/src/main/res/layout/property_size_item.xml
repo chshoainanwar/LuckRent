@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:elevation="@dimen/_10sdp"
+            android:minWidth="@dimen/_20sdp"
+            android:minHeight="@dimen/_20sdp"
+            android:src="@drawable/ic_cancel" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@id/tvSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:paddingStart="@dimen/_12sdp"
+            android:singleLine="true"
+            android:text="Property Size"
+            android:textColor="@color/darkBlue"
+            android:textSize="@dimen/_13sdp" />
+
+<!--        <androidx.appcompat.widget.AppCompatEditText-->
+<!--            android:id="@id/etSize"-->
+<!--            android:layout_below="@+id/tvSize"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ellipsize="marquee"-->
+<!--            android:paddingStart="@dimen/_12sdp"-->
+<!--            android:singleLine="true"-->
+<!--            android:textColor="@color/darkBlue"-->
+<!--            android:textSize="@dimen/_13sdp" />-->
+
+        <RelativeLayout
+            android:id="@+id/llSize"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/tvSize"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_12sdp"
+                android:singleLine="true"
+                android:textColor="@color/darkBlue"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_30sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Edit"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+        </RelativeLayout>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:visibility="gone"
+            android:id="@+id/llSiz"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/tvSize"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/bg_edit"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                    android:id="@+id/spPropertySize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_13sdp"
+                    app:ms_background_color="@android:color/transparent"
+                    app:ms_hide_arrow="true"
+                    app:ms_hint="Size"
+                    app:ms_hint_color="@color/blue"
+                    app:ms_padding_left="@dimen/_12sdp"
+                    app:ms_padding_right="@dimen/_5sdp"
+                    app:ms_popup_padding_left="@dimen/_8sdp"
+                    app:ms_popup_padding_right="@dimen/_13sdp"
+                    app:ms_popup_padding_top="@dimen/_3sdp"
+                    app:ms_text_color="@color/blue" />
+
+                <LinearLayout
+                    android:id="@+id/llSizArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:paddingRight="@dimen/_15sdp"
+                        android:src="@drawable/ic_blue_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</layout>

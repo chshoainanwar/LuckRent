@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">luck-rent-android</string>
+    <string name="map_key">AIzaSyBVFb07yp_WQ_8Eb4QA5hjv2g7mhjn54is</string>
+    <string name="pager_text">Welcome to LuckRent App</string>
+    <string name="login_text1">The Good Stuff \nIs About To \nStart</string>
+    <string name="login">LOGIN</string>
+    <string name="login_text2">Welcome Back! \nThe good stuff is about to start! \nStay organized and stay positive</string>
+    <string name="forgetPassword">Forgot Password?</string>
+    <string name="forgeText">Please enter your email address \nto receive verification code </string>
+    <string name="verifyotp">Verify OTP</string>
+    <string name="otp_text">Please enter 4 digit code \nsent to your email</string>
+    <string name="dont_receive">I didn"'"t receive code.</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="time_left">1:20 Sec left</string>
+    <string name="new_password">Create New Password</string>
+    <string name="new_password_text">You can make password strong using \ndifferent signs such as @ or !</string>
+    <string name="signup_text">Signup</string>
+    <string name="terms_text">By signing up I agree Terms &amp; Conditions\n and Privacy Policy</string>
+    <string name="language_text">GLAD YOU"'"RE HERE \nTELL US ABOUT YOU</string>
+    <string name="rent_payment_text">Rent Collection can be automated by setting up \npre-authorized payments through \nthe pay-per-use rent collection service</string>
+    <string name="location_text">Where are your \nrental properties?</string>
+    <string name="reminder">Set Reminder</string>
+    <string name="transaction_desc">We have recipient name on top left, invoice date on bottom left, status on top right, and the total amount on the bottom right.</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="consent_desc">The Applicant consents to the Landlord obtaining credit information on the Applicant from one or more consumer reporting agencies. The Applicant authorizes the reporting agencies and any other person to disclose relevant information about the Applicant to the Landlord. The Applicant consent to the Landlord obtaining reference check from current or previous landlord to confirm rental status and from employer to confirm employment status only. If this application is accepted, the Applicant understands that the above information will also be used and disclosed for responding to emergencies, ensuring the orderly management of the tenancy and complying with legal requirements.</string>
+    <string name="offer_rent_desc">I, the undersigned (called the "Applicant"),offer to rent the above rental unit at the above rent amount as posted by the Landlord.</string>
+    <string name="credit_desc">Credit check purchases are made \non third-party websites. \nBy tapping the company name, \nyou will be taken to the company\'s website \nto join as a group member. \nTo join, use the LuckRent \nMembership ID found under My Profile.</string>
+
+    <string name="text_add">Please Download LuckRent App from Apple Store or \nGoogle Play Store and submit your application with \nthe following link:</string>
+
+    <string name="subscription">Subscription</string>
+    <string name="digital_inspection_desc">For Digital Inspection to be valid, both the landlord and tenant must sign in person in the app. You can order for move-ins, move-outs, or during tenancy inspections. The photos you take will be date/time stamped, and the resulting PDF will be automatically stored in the document vault and sent to the tenant.</string>
+    <string name="rent_estimation_desc">Knowing the market rental rate in the area where the rental property is located is the first step in rental management. Rent Estimation is a data-driven rent report that lets you know the asking rent for your area so you can set the rent accordingly.</string>
+    <string name="rent_collection_desc">Currently, Rent Collection is available only in Canada. Provided by ZumRails and involves an underwriting process and remote ID verification. Once activated, you must add your bank account and request your tenant to activate. CAD prices apply. Tap link for more information.</string>
+    <string name="import_desc">The Data Import Service allows you \nto restore your data from iCloud, \nGoogle Drive, and Dropbox. \nLog in with your cloud storage credentials \nto get started.</string>
+    <string name="digital_desc">Digital signature allow you \nto use our templated leases or \nforms to sign electronically. \nThe digital contracts are legally \nbinding under the 2000 U.S. \nElectronic Signature in Global \nand National Commerce Act (ESIGN) \nand compliant with other Acts</string>
+    <string name="insurance_desc">Insurance purchases are made on \nthird party websites. \nAfter tapping on the insurance \ncompany name, you will be taken \nto the company\'s webpage \nto explore your options</string>
+    <string name="profile_desc">Hi there, thanks for showing us the beautiful
+        house you have. We are submitting our
+        application with the LuckRent App per your
+    request. Please let me know if you need
+    further information from me. Thank you.</string>
+
+    <string name="request_message">Hi there, thanks for showing us the beautiful house you have.
+    We are submitting with the LuckRent App per
+    your request. Please let me know if you need further
+    information from me. Thank you.</string>
+
+    <string name="detail_desc">Iorem ipsum is a name for a common type of
+    placeholder text. Also known as filler or dummy text,
+    this is simply text copy that serves  to fill a space
+    without actually saying anything meaningful.</string>
+
+    <string name="subscription_des">Our pricing plan is like a layered cake. The first
+layer is always free.
+Landlord: The second layer is $5 per unit, then
+the third layer is $2.50 per unit and so on.  A
+subscription fee of $5 per month applies if you
+own 2 units. For a subscription of 4 units, the fee
+is $12.50 per month.</string>
+    <string name="select_your_role">Select Your Role</string>
+    <string name="how_many_units">How Many Units?</string>
+    <string name="leases_exhibits"><![CDATA[Leases & Exhibits]]></string>
+
+    <string name="description">This app lets you switch between four roles:
+        \nRenter, Landlord, Property Manager,\n and Contractor.
+        \n
+        \nRenter is the default role.
+        \nThe default role can be changed in your profile.
+        \nWe only require monthly subscriptions \nfor landlords and property managers,
+        \nand the first unit is always free.
+        \nBy tapping, long tapping, and swiping, \nyou can find shortcuts to make \nthings more efficient.
+        \n
+        \nIt is our pleasure to have you on board."</string>
+
+
+</resources>

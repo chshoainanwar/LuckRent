@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.inventory.InventoryMain">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+                <RelativeLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/topBar"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rlSubscription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/ivWarranty"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_below="@+id/ivWarranty"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnAppliance"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@id/etPricePerUnit"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginHorizontal="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/roundbutton"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Add Appliance"
+                                        android:textColor="@color/white" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnMaintenance"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@id/etPricePerUnit"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginHorizontal="@dimen/_5sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/roundbutton"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Warranty Doc"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler"
+                                    android:layout_below="@+id/llBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+</layout>

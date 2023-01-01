@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/contentSideMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginStart="@dimen/_20sdp"
+            android:background="@color/white">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/ic_nav_bg"
+                        android:id="@+id/clickaBleNav"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/userData"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:elevation="@dimen/_10sdp"
+                        >
+                        <RelativeLayout
+                            android:id="@+id/rlProfilePic"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginStart="@dimen/_10sdp">
+
+                            <com.mikhaellopez.circularimageview.CircularImageView
+                                android:id="@+id/ivProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:layout_marginBottom="@dimen/_3sdp"
+                                android:src="@drawable/annie"
+                                app:civ_border_color="@color/orange" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/rlProfilePic"
+                            android:fontFamily="@font/poppins_bold"
+                            android:padding="@dimen/_5sdp"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:text="Alex Dover"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvDashboard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvName"
+                            android:layout_marginTop="-12dp"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/rlProfilePic"
+                            android:fontFamily="@font/poppins_medium"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:singleLine="true"
+                            android:text="Dashboard"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rlTop"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:id="@+id/rlRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rlTop"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="true" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOtherLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rvTop"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:text="OTHERS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvBelow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="true"
+                            android:layout_below="@id/tvOtherLabel"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            tools:listitem="@layout/side_item" />
+
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCross"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_170sdp"
+            android:background="@drawable/bg_circle"
+            android:elevation="0dp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:src="@drawable/ic_back_nav" />
+
+    </RelativeLayout>
+</layout>

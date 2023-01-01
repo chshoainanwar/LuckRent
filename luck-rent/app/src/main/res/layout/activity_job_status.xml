@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.contractormodule.JobStatus">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dashboardDrawerLayoutContractor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutJobStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutRentInvoice">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvJobStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutTenant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Client : "
+                                android:textColor="@color/black" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvOwner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Alex Dover"
+                                android:textColor="@color/black"
+                                android:layout_toRightOf="@+id/tvCli"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutSecurityDeposit"
+                            android:layout_below="@+id/layoutTenant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddrs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Address : "
+                                android:textColor="@color/black" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="33 street US"
+                                android:textColor="@color/black"
+                                android:layout_toRightOf="@+id/tvAddrs"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutPetDamage"
+                            android:layout_below="@+id/layoutSecurityDeposit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJob"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Job Description : "
+                                android:textColor="@color/black" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJobDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Here is Job Description"
+                                android:textColor="@color/black"
+                                android:layout_toRightOf="@+id/tvJob"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutLeaseStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutPetDamage"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJobStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Job Start Date : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJobStartDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tvJobStart"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="2021-02-22"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutJobCompleteDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutLeaseStartDate"
+                            android:layout_marginTop="10dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJobComplete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Job Completion Date : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvJobCompleteDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/tvJobComplete"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="2022-02-22"
+                                android:textColor="@color/black" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutPayment"
+                            android:layout_below="@+id/layoutJobCompleteDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvInv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Invoiced Amount : "
+                                android:textColor="@color/black" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPaymentDue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="$00.00"
+                                android:textColor="@color/black"
+                                android:layout_toRightOf="@+id/tvInv"/>
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutPayment"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Job Status :"
+                            android:textColor="@color/orange"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/rlChoose"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_23sdp"
+                            android:layout_below="@+id/tvStatus"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <RadioGroup
+                                android:id="@+id/firstRg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:contentDescription="Layouts"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <RadioButton
+                                    android:id="@+id/btnInProgress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:buttonTint="@color/darkBlue"
+                                    android:text="In Progress"
+                                    android:checked="true"
+                                    android:textColor="@color/mediumSand"
+                                    android:textSize="@dimen/_12sdp" />
+
+                                <RadioButton
+                                    android:id="@+id/btnCompleted"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_weight=".5"
+                                    android:buttonTint="@color/mediumSand"
+                                    android:text="Completed"
+                                    android:textColor="@color/mediumSand"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </RadioGroup>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@id/cvJobStatus"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/roundbutton"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="View Property Details"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/dashboardNavViewForContractor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            android:visibility="visible">
+            <include
+                android:id="@+id/dashboardNavMenuLayoutForContractor"
+                layout="@layout/side_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
+</layout>

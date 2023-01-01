@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgColor"
+        tools:context=".ui.main.adds.Accept">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/top_bar"
+                    layout="@layout/top_bar_myadd" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/top_bar">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <RelativeLayout
+                                android:id="@+id/addLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp">
+
+                                <include
+                                    android:id="@+id/addsLayout"
+                                    layout="@layout/adds_layout" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/profileLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/addLayout"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/bg_profile"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:paddingBottom="@dimen/_10sdp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profileImage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/person" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/profileText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_toRightOf="@+id/profileImage"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:includeFontPadding="false"
+                                    android:text="Thomas Baker"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/profileEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/profileText"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_toRightOf="@+id/profileImage"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:includeFontPadding="false"
+                                    android:text="thomasbaker12@gmail.com"
+                                    android:textColor="@color/white" />
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvRequestMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/profileLayout"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Request Message"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMessage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvRequestMessage"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/bg_add"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/request_message"
+                                android:textColor="@color/bg_text"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnRespond"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/tvMessage"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:background="@drawable/roundbutton"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingHorizontal="@dimen/_20sdp"
+                                android:text="Respond to Message"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+                            <RelativeLayout
+                                android:id="@+id/layout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/btnRespond"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/bg_add"
+                                android:padding="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/preferencesLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_5sdp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <RelativeLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvReferences"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="References"
+                                                android:textColor="@color/bg_text" />
+                                        </RelativeLayout>
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:id="@+id/spLayout"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_toRightOf="@id/tvReferences"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/bg_edit"
+                                            android:orientation="horizontal">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent">
+
+                                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                    android:id="@+id/spReference"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginLeft="@dimen/_6sdp"
+                                                    android:layout_marginRight="@dimen/_6sdp"
+                                                    android:background="@android:color/transparent"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:textSize="@dimen/_13sdp"
+                                                    app:ms_background_color="@android:color/transparent"
+                                                    app:ms_hide_arrow="true"
+                                                    app:ms_hint="Select"
+                                                    app:ms_hint_color="@color/bg_text"
+                                                    app:ms_padding_left="@dimen/_12sdp"
+                                                    app:ms_padding_right="@dimen/_5sdp"
+                                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                                    app:ms_text_color="@color/bg_text" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/roleArrow"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentRight="true">
+
+                                                    <ImageView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:paddingLeft="@dimen/_15sdp"
+                                                        android:paddingRight="@dimen/_15sdp"
+                                                        android:src="@drawable/ic_arrow_add" />
+
+                                                </LinearLayout>
+
+                                            </RelativeLayout>
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/preferencesLayout">
+
+                                    <View
+                                        android:id="@+id/line1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:background="@color/lineColor" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutCreditScore"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/line1">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivCredit"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_centerVertical="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Credit Score"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+                                            <androidx.appcompat.widget.AppCompatEditText
+                                                android:id="@+id/ivCreditScore"
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_40sdp"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginVertical="@dimen/_5sdp"
+                                                android:layout_toRightOf="@+id/ivCredit"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/bg_edit"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:hint="325"
+                                                android:inputType="text"
+                                                android:paddingHorizontal="@dimen/_20sdp"
+                                                android:textColor="@color/bg_text"
+                                                android:textColorHint="@color/bg_text" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:id="@+id/line2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:layout_below="@+id/layoutCreditScore"
+                                        android:background="@color/lineColor" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutTotal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/line2"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivTotal"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_centerVertical="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total # Of Occupants"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivTotalOccupants"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="2"
+                                                    android:paddingStart="@dimen/_20sdp"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:id="@+id/line3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:layout_below="@+id/layoutTotal"
+                                        android:background="@color/lineColor" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutPets"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/line3"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivPets"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="# Of Pets"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivNumberPets"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingStart="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="1 dog"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:id="@+id/line4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:layout_below="@+id/layoutPets"
+                                        android:background="@color/lineColor" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutSmoker"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/line4"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivSmok"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Smoker?"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivSmoker"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:paddingStart="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="No"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:id="@+id/line5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:layout_below="@+id/layoutSmoker"
+                                        android:background="@color/lineColor" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutOccupation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/line5"
+                                        android:layout_marginTop="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivOccu"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Occupation"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/ivOccupation"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                   android:paddingStart="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Software Engineer"
+                                                    android:textColor="@color/bg_text" />
+                                            </RelativeLayout>
+
+
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnViewFullApplication"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_below="@+id/layout1"
+                                android:layout_marginHorizontal="@dimen/_20sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:background="@drawable/roundbutton"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="View Full Application"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/layoutButtons"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45sdp"
+                                android:layout_below="@id/btnViewFullApplication"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_20sdp">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnReject"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginVertical="@dimen/_5sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:background="@drawable/reject_button"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Reject"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnAccept"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginVertical="@dimen/_5sdp"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:background="@drawable/roundbutton"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Accept"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </RelativeLayout>
+</layout>

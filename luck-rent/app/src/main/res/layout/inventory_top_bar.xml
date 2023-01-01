@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlInventory"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:background="@drawable/bg_topbar">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:maxWidth="@dimen/_55sdp"
+        android:maxHeight="@dimen/_51sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_menu" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:src="@drawable/ic_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMainText"
+        android:layout_below="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="03257-21251"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:layout_marginTop="-15dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMiniText"
+        android:layout_below="@+id/tvMainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="New Colony 33 street ny..."
+        android:textColor="@color/white"
+        android:textSize="@dimen/_9sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:layout_marginTop="-5dp"/>
+
+    <RelativeLayout
+
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_below="@+id/tvMiniText"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_toStartOf="@+id/ivPropertyAdd"
+            android:background="@drawable/bg_search"
+            android:drawableStart="@drawable/ic_location"
+            android:drawableEnd="@drawable/ic_search"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:hint="Try Dishwasher"
+            android:imeOptions="actionDone"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPropertyAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_toStartOf="@+id/ivPropertyAdd"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:hint="All Properties"
+            android:maxLines="2"
+
+            android:ellipsize="marquee"
+            android:imeOptions="actionDone"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPropertyAdd"
+            android:layout_width="@dimen/_30sdp"
+
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:src="@drawable/ic_group_3199"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</layout>

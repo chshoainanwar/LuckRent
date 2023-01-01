@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sandWhite"
+        tools:context=".ui.main.auth.LocationSelection">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_language_bg"
+            android:elevation="1dp">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/locationlogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:src="@drawable/language" />
+
+                <RelativeLayout
+                    android:id="@+id/map_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_below="@+id/locationlogo"
+                    android:layout_margin="@dimen/_15sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+<!--                            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                                android:id="@+id/map_icon"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:scaleType="fitXY"-->
+<!--                                android:src="@drawable/map_icon" />-->
+                            <fragment
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/map"
+                                android:name="com.google.android.gms.maps.SupportMapFragment" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/map_layout"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:text="@string/location_text"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_below="@id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/finalcurve">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Country"
+                            android:textColor="@color/txt_color" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/spinnerCountryLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvCountry"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_edit"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                    android:id="@+id/spCountry"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:layout_marginBottom="@dimen/_2sdp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_13sdp"
+                                    app:ms_background_color="@android:color/transparent"
+                                    app:ms_hide_arrow="true"
+                                    app:ms_hint_color="@color/sand"
+                                    app:ms_padding_left="@dimen/_12sdp"
+                                    app:ms_padding_right="@dimen/_5sdp"
+                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                    app:ms_text_color="@color/sand" />
+
+                                <LinearLayout
+                                    android:id="@+id/countryArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/_15sdp"
+                                        android:paddingRight="@dimen/_15sdp"
+                                        android:src="@drawable/ic_blue_arrow" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spinnerCountryLayout"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Location"
+                            android:textColor="@color/txt_color" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/spinnerStateLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvLocation"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_edit"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                    android:id="@+id/spLocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:layout_marginBottom="@dimen/_2sdp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_13sdp"
+                                    app:ms_background_color="@android:color/transparent"
+                                    app:ms_hide_arrow="true"
+                                    app:ms_hint_color="@color/sand"
+                                    app:ms_padding_left="@dimen/_12sdp"
+                                    app:ms_padding_right="@dimen/_5sdp"
+                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                    app:ms_text_color="@color/sand" />
+
+                                <LinearLayout
+                                    android:id="@+id/LocationArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/_15sdp"
+                                        android:paddingRight="@dimen/_15sdp"
+                                        android:src="@drawable/ic_blue_arrow" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spinnerStateLayout"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="City"
+                            android:textColor="@color/txt_color" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/spinnerCityLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvCity"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/bg_edit"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                    android:id="@+id/spCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:layout_marginBottom="@dimen/_2sdp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/_13sdp"
+                                    app:ms_background_color="@android:color/transparent"
+                                    app:ms_hide_arrow="true"
+                                    app:ms_hint_color="@color/sand"
+                                    app:ms_padding_left="@dimen/_12sdp"
+                                    app:ms_padding_right="@dimen/_5sdp"
+                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                    app:ms_text_color="@color/sand" />
+
+                                <LinearLayout
+                                    android:id="@+id/CityArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/_15sdp"
+                                        android:paddingRight="@dimen/_15sdp"
+                                        android:src="@drawable/ic_blue_arrow" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/nextBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_below="@id/spinnerCityLayout"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:background="@drawable/roundbutton"
+                            android:fontFamily="@font/poppins_regular"
+                            android:padding="10dp"
+                            android:text="NEXT"
+                            android:textAlignment="center"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

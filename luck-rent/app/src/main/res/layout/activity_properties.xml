@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/contentProperties"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/F2White"
+        tools:context=".ui.main.property.PropertiesActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlus"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:background="@null" />
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProperties"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topBar"
+                    android:layout_margin="@dimen/_10sdp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAdds"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_125sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:background="@drawable/ic_add_right"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddBuilding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:singleLine="true"
+                android:text="Add Building"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddBuilding"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:singleLine="true"
+                android:text="Add Unit"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddPropertyManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAddUnit"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:singleLine="true"
+                android:text="Add Property Manager"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rlAdds"-->
+<!--            android:layout_width="@dimen/_140sdp"-->
+<!--            android:layout_height="@dimen/_60sdp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginStart="@dimen/_18sdp"-->
+<!--            android:layout_marginTop="@dimen/_125sdp"-->
+<!--            android:layout_marginEnd="@dimen/_35sdp"-->
+<!--            android:background="@drawable/ic_add_right"-->
+<!--            android:elevation="@dimen/_10sdp"-->
+<!--            android:padding="@dimen/_5sdp"-->
+<!--            android:visibility="gone">-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tvAddBySingleUnit"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/_5sdp"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:padding="@dimen/_3sdp"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="Add Single Unit Bldg"-->
+<!--                android:textColor="@color/sand"-->
+<!--                android:textSize="@dimen/_12sdp" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/tvAddByMultipleUnit"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@id/tvAddBySingleUnit"-->
+<!--                android:layout_marginStart="@dimen/_5sdp"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:padding="@dimen/_3sdp"-->
+<!--                android:singleLine="true"-->
+<!--                android:text="Add Multiple Unit Bldg"-->
+<!--                android:textColor="@color/sand"-->
+<!--                android:textSize="@dimen/_12sdp" />-->
+
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rlSingleAdds"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_125sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:background="@drawable/ic_add_right"
+            android:elevation="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAddMUBUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:singleLine="true"
+                android:text="Add MUB Unit"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_12sdp" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

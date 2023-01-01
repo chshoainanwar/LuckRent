@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.example.luck_rent_android"
+        minSdk 23
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    api project(path: ':android-networking')
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    testImplementation 'junit:junit:4.+'
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'com.poovam:pin-edittext-field:1.2.3'
+    api 'com.intuit.sdp:sdp-android:1.0.6'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.fenchtose:tooltip:0.1.6' //ToolTip
+    implementation 'com.github.bumptech.glide:glide:4.12.0' //GLide
+    api 'com.jaredrummler:material-spinner:1.3.1' //Material Spinner
+//    implementation 'com.tbuonomo:dotsindicator:4.2'
+        implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation 'com.github.chivorns:smartmaterialspinner:1.5.0'
+    implementation 'com.github.cachapa:ExpandableLayout:2.9.2'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+    implementation 'com.karumi:dexter:6.2.3'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'com.github.hadiidbouk:ChartProgressBar-Android:2.0.6'
+
+    implementation 'com.github.AAChartModel:AAChartCore-Kotlin:-SNAPSHOT'
+
+//    implementation 'com.github.huzenan:EasyToggle:v1.0.0'
+
+    implementation 'com.ramijemli.percentagechartview:percentagechartview:0.3.0'
+    // Segmented Button Library
+    implementation 'com.github.addisonelliott:SegmentedButton:3.1.2-support'
+
+}

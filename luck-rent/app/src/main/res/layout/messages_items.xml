@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@color/sandWhite">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/profile2"
+                app:civ_border_color="@color/orange"
+                app:civ_border_width="@dimen/_1sdp" />
+
+            <RelativeLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toLeftOf="@+id/timeLayout"
+                android:layout_toRightOf="@+id/ivImage">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:text="James"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:maxLines="2"
+                    android:text="In Publishing and graphic design , Lorem ispum ia a placeholder text commonly"
+                    android:textColor="@color/bg_text"
+                    android:textSize="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:singleLine="true"
+                    android:text="8:15 pm"
+                    android:textColor="@color/bg_text"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_below="@+id/tvTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:background="@drawable/message_bg">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8sdp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/line_color" />
+
+        </RelativeLayout>
+</layout>

@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:layout_marginVertical="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_entry">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/entryFirstLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/red"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEntry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Entry"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/arrowLayout"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arro_circle" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_arrow_black" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hideLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/entryFirstLayout">
+
+                    <RelativeLayout
+                        android:id="@+id/boxMainLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutEntryFirstDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEntryFirstDesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="-3dp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Condition at Start of Tenancy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/boxFirstLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layoutEntryFirstDesc"
+                            android:weightSum="4">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:layout_weight="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstCharG"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_marginHorizontal="@dimen/_3sdp"
+                                    android:background="@drawable/bg_green"
+                                    android:gravity="center"
+                                    android:text="G"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_18sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstGood"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvFirstCharG"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Good"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_10sdp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:layout_weight="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstCharF"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_marginHorizontal="@dimen/_3sdp"
+                                    android:background="@drawable/bg_yellow"
+                                    android:gravity="center"
+                                    android:text="F"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_18sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstFair"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvFirstCharF"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Fair"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_10sdp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:layout_weight="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstCharP"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_marginHorizontal="@dimen/_3sdp"
+                                    android:background="@drawable/bg_blue"
+                                    android:gravity="center"
+                                    android:text="P"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_18sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstPoor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvFirstCharP"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Poor"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_5sdp"
+                                android:layout_marginVertical="@dimen/_10sdp"
+                                android:layout_weight="1">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstCharD"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_50sdp"
+                                    android:layout_marginHorizontal="@dimen/_3sdp"
+                                    android:background="@drawable/bg_red"
+                                    android:gravity="center"
+                                    android:text="D"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_18sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstDamaged"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvFirstCharD"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Damaged"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </RelativeLayout>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <EditText
+                            android:id="@+id/etFirstComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_below="@+id/boxFirstLayout"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            android:background="@drawable/bg_inspection_comment"
+                            android:gravity="top"
+                            android:hint="Comments..."
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/bg_text"
+                            android:textColorHint="@color/bg_text"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlQuickWordPicks"
+                            android:layout_below="@+id/etFirstComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddQuickWordsStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Quick Word Picks"
+                                android:textColor="@color/bg_text"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <!--Tab Layout 1-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout1Start"
+                                android:layout_below="@+id/tvAddQuickWordsStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Walls and Trim"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Ceilings"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Closets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 2-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout2Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout1Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Minor Scratch"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dent"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dirty"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab layout 3-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout3Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout2Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Lighting Fixtures"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Windows/Screens"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Electrical Outlets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 4-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout4Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout3Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Floor Carpet"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 5 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout5Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout4Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Stove"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Hoodfan"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Fridge"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 6 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout6Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout5Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dishwasher"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Counter"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Cabinets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 7 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout7Start"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout6Start"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Drawers"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Images Layout-->
+                            <RelativeLayout
+                                android:id="@+id/rluploadFile"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_90sdp"
+                                android:layout_below="@+id/tabLayout7Start"
+                                android:layout_marginVertical="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_85sdp"
+                                    android:background="@drawable/bg_dottted_border"
+                                    app:cardBackgroundColor="@android:color/transparent">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivAdd"
+                                            android:layout_width="@dimen/_50sdp"
+                                            android:layout_height="@dimen/_50sdp"
+                                            android:padding="@dimen/_10sdp"
+                                            android:src="@drawable/ic_upload_file" />
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                            <!--RecyclerView Layout-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/layoutImagesStart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rluploadFile"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="3">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvPhotosStart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlEndTenanacy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rlQuickWordPicks"
+                            android:background="@color/white"
+                            android:padding="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/tvEndTenancy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Condition at End of Tenancy"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_13sdp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/boxMainLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/boxMainLayout1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/boxSecondLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_30sdp"
+                                android:weightSum="4">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_5sdp"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondCharG"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_marginHorizontal="@dimen/_3sdp"
+                                        android:background="@drawable/bg_green"
+                                        android:gravity="center"
+                                        android:text="G"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondGood"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvSecondCharG"
+                                        android:layout_marginVertical="@dimen/_10sdp"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="Good"
+                                        android:textColor="@color/bg_text"
+                                        android:textSize="@dimen/_10sdp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_5sdp"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondCharF"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_marginHorizontal="@dimen/_3sdp"
+                                        android:background="@drawable/bg_yellow"
+                                        android:gravity="center"
+                                        android:text="F"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondFair"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvSecondCharF"
+                                        android:layout_marginVertical="@dimen/_10sdp"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="Fair"
+                                        android:textColor="@color/bg_text"
+                                        android:textSize="@dimen/_10sdp" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_5sdp"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondCharP"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_marginHorizontal="@dimen/_3sdp"
+                                        android:background="@drawable/bg_blue"
+                                        android:gravity="center"
+                                        android:text="P"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondPoor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvSecondCharP"
+                                        android:layout_marginVertical="@dimen/_10sdp"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="Poor"
+                                        android:textColor="@color/bg_text"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_5sdp"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondCharD"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_50sdp"
+                                        android:layout_marginHorizontal="@dimen/_3sdp"
+                                        android:background="@drawable/bg_red"
+                                        android:gravity="center"
+                                        android:text="D"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_18sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSecondDamaged"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvSecondCharD"
+                                        android:layout_marginVertical="@dimen/_10sdp"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="Damaged"
+                                        android:textColor="@color/bg_text"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </RelativeLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <EditText
+                                android:id="@+id/etSecondComments"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_100sdp"
+                                android:layout_below="@+id/boxSecondLayout"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:background="@drawable/bg_inspection_comment"
+                                android:gravity="top"
+                                android:hint="Comments..."
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddQuickWords"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etSecondComments"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="Quick Word Picks"
+                                android:textColor="@color/bg_text"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <!--Tab Layout 1-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tvAddQuickWords"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Walls and Trim"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Ceilings"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Closets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 2-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout1"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Minor Scratch"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dent"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dirty"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab layout 3-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout3"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout2"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Lighting Fixtures"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Windows/Screens"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Electrical Outlets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 4-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout4"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout3"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Floor Carpet"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 5 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout5"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout4"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Stove"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Hoodfan"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Fridge"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 6 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout6"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout5"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Dishwasher"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Counter"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Cabinets"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Tab Layout 7 For Kitchen-->
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/tabLayout7"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_below="@+id/tabLayout6"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_textview"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:gravity="center"
+                                    android:text="Drawers"
+                                    android:textColor="@color/bg_text"
+                                    android:textSize="@dimen/_9sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <!--Images Layout-->
+                            <RelativeLayout
+                                android:id="@+id/rluploadFileEnd"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="@dimen/_90sdp"
+                                android:layout_below="@+id/tabLayout7"
+                                android:layout_marginVertical="@dimen/_5sdp"
+                                android:layout_marginStart="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_85sdp"
+                                    android:background="@drawable/bg_dottted_border"
+                                    app:cardBackgroundColor="@android:color/transparent">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivAddEnd"
+                                            android:layout_width="@dimen/_50sdp"
+                                            android:layout_height="@dimen/_50sdp"
+                                            android:padding="@dimen/_10sdp"
+                                            android:src="@drawable/ic_upload_file" />
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/layoutImagesEnd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rluploadFileEnd"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="3">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_3sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rvPhotosEnd"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

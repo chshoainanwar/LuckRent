@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.property.BuildingPreview">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/dashboardDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/topBar"
+                android:fadeScrollbars="false"
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlEdit"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@drawable/bg_edit_add_details"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvEdit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:text="Edit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minWidth="@dimen/_18sdp"
+                            android:minHeight="@dimen/_20sdp"
+                            android:src="@drawable/ic_edit_add"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tvEdit"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginStart="@dimen/_10sdp"/>
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvFirst"
+                        android:layout_below="@+id/rlEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAdres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Address"
+                                android:textColor="@color/blue" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddress"
+                                android:layout_below="@+id/tvAdres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="33 Street US"
+                                android:textColor="@color/bg_text" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPostal"
+                                android:layout_below="@+id/tvAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Postal Code"
+                                android:textColor="@color/blue" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPostalCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvPostal"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="03251 - 21251"
+                                android:textColor="@color/bg_text" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBuild"
+                                android:layout_below="@+id/tvPostalCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Building Notes"
+                                android:textColor="@color/blue" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBuildingNotes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tvBuild"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Mileage"
+                                android:textColor="@color/bg_text" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvRecycler"
+                        android:layout_below="@+id/cvFirst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        android:layout_margin="@dimen/_10sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnDone"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_below="@+id/cvRecycler"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:background="@drawable/roundbutton"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Done"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+            </ScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/dashboardNavView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            android:visibility="gone">
+
+            <include
+
+                android:id="@+id/dashboardNavMenuLayout"
+                layout="@layout/side_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.navigation.NavigationView>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.rentermodule.RenterUnpaidInvoice">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayoutRenter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layoutTopBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/topBar"
+                        layout="@layout/top_bar" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutTopBar"
+                    android:layout_marginVertical="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRentPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Rent Payment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        android:layout_marginStart="@dimen/_10sdp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutRentInvoiceDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_below="@+id/tvRentPayment">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvRentInvoiceDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_5sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/layoutRentalAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRen"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Rental Address : "
+                                        android:textColor="@color/black" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRentalAddress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tvRen"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="112-908 Quayside"
+                                        android:textColor="@color/black" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layoutRent"
+                                    android:layout_below="@+id/layoutRentalAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRnt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Rent : "
+                                        android:textColor="@color/black" />
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="$1600.00"
+                                        android:textColor="@color/black"
+                                        android:layout_toRightOf="@+id/tvRnt"/>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layoutLateFee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/layoutRent"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvLate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Late Fee : "
+                                        android:textColor="@color/black" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvLateFee"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/tvLate"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="$50.00"
+                                        android:textColor="@color/black" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layoutPaymentDue"
+                                    android:layout_below="@+id/layoutLateFee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Other Charges : "
+                                        android:textColor="@color/black" />
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPaymentDue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="$100  "
+                                        android:textColor="@color/black"
+                                        android:layout_toRightOf="@+id/tvOther"/>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/layoutTotal"
+                                    android:layout_below="@+id/layoutPaymentDue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvTotl"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:text="Total : "
+                                        android:textColor="@color/black" />
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="$1650.00"
+                                        android:textColor="@color/black"
+                                        android:layout_toRightOf="@+id/tvTotl"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPaymentMethod"
+                        android:layout_below="@+id/layoutRentInvoiceDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Payment Method"
+                        android:textColor="@color/darkBlue" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/spinnerPaymentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_below="@id/tvPaymentMethod"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spPaymentMethod"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint_color="@color/sand"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/sand" />
+
+                            <LinearLayout
+                                android:id="@+id/paymentMethodArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMarkAsPaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/spinnerPaymentLayout"
+                        android:layout_marginStart="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginEnd="@dimen/_40sdp"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:background="@drawable/roundbutton"
+                        android:fontFamily="@font/poppins_regular"
+                        android:padding="10dp"
+                        android:text="Mark As Paid"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavViewForRenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/dashboardNavMenuLayoutForRenter"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+</layout>

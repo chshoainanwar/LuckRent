@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sandWhite"
+        tools:context=".ui.main.contractormodule.ContractorRentProperty">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayoutContractor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layoutTopBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/topBar"
+                        layout="@layout/contractor_rent_top_bar" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutTopBar">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:id="@+id/mainLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvFirst"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/_10sdp"
+                                app:cardCornerRadius="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/innerLayout1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_150sdp"
+                                        android:src="@drawable/property_image"
+                                        android:scaleType="fitXY"/>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ivImage"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Landlord"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Project Manager"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear1"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvLandLord"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="John Smith"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_11sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvProjectManager"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Russell"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_11sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/Rnt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear2"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Rent Per Month"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <TextView
+                                        android:id="@+id/tvRentPerMonth"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/Rnt"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="$ 300"
+                                        android:textColor="@color/bg_text"
+                                        android:textSize="@dimen/_11sdp" />
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/tvPropertyDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cvFirst"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="Property Details"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_18sdp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvSecond"
+                                android:layout_below="@+id/tvPropertyDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/innerLayout2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Property Code:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Address:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear3"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvPropertyCode"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="03251 - 21251"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvAddress"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="New Colony 33 Streerny..."
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear4"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Postal Code:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Unit #:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear5"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvPostalCode"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="V6H 1W5"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                                                                <TextView
+                                                                                    android:id="@+id/tvUnit"
+                                                                                    android:layout_width="0dp"
+                                                                                    android:layout_height="wrap_content"
+                                                                                    android:layout_weight="1"
+                                                                                    android:singleLine="true"
+                                                                                    android:text="307"
+                                                                                    android:textColor="@color/bg_text"
+                                                                                    android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear6"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Size:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Locker #:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear7"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvSize"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:maxLines="2"
+                                            android:text="1271 sqft"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvLocker"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="P3 - Rm3 - #102"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear9"
+                                        android:layout_below="@+id/linear8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="2"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Key #:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Rent:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear10"
+                                        android:layout_below="@+id/linear9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="2"
+                                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                                        <TextView
+                                            android:id="@+id/tvKey"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="07"
+                                            android:singleLine="true"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp"/>
+                                        <TextView
+                                            android:id="@+id/tvRent"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="$ 500"
+                                            android:singleLine="true"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp"/>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear11"
+                                        android:layout_below="@+id/linear10"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="2"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Parking #:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Utility Shares:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear11"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvParking"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="P2 - 205"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvUtilityShares"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="2%"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear13"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear12"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Bedroom:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Bathroom:"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/linear13"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:weightSum="2">
+
+                                        <TextView
+                                            android:id="@+id/tvBedroomNo"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:maxLines="2"
+                                            android:text="2"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tvBathroomNo"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:singleLine="true"
+                                            android:text="2"
+                                            android:textColor="@color/bg_text"
+                                            android:textSize="@dimen/_12sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/linear15"
+                                        android:layout_below="@+id/linear14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:weightSum="2"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="Rented for 7 Months(S)"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="6 Month(S)Left"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:fontFamily="@font/poppins_regular"/>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </RelativeLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnRequest"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/cvSecond"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:layout_marginRight="@dimen/_10sdp"
+                                android:background="@drawable/roundbutton"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Request Maintenance"
+                                android:textColor="@color/white" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/layoutButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/btnRequest"
+                                android:layout_marginVertical="@dimen/_20sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnSendMessage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/roundbutton"
+                                    android:text="Send Message"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnSendApplication"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/roundbutton"
+                                    android:text="Submit Application"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </RelativeLayout>
+
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavViewForContractor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:visibility="visible">
+                <include
+                    android:id="@+id/dashboardNavMenuLayoutForContractor"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+</layout>

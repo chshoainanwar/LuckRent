@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_8sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/house" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivProperty"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:layout_marginEnd="@dimen/_13sdp">
+
+                    <TextView
+                        android:id="@+id/propertyNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/propertyUnits"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="0335-4067173"
+                        android:textColor="@color/darkSand"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:id="@+id/propertyUnits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="2 Units"
+                        android:textColor="@color/darkSand"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLocation"
+                        android:layout_width="@dimen/_9sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/propertyNo"
+                        android:layout_marginTop="-3dp"
+                        android:src="@drawable/ic_orange_location" />
+
+                    <TextView
+                        android:id="@+id/tvPropertyAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_below="@id/propertyNo"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="-2dp"
+                        android:layout_toEndOf="@id/ivLocation"
+                        android:fontFamily="@font/poppins_light"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="New colony 33 street ny...."
+                        android:textColor="@color/sand"
+                        android:textSize="@dimen/_10sdp"
+
+                        />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@id/tvPropertyAddress"
+                        android:layout_marginLeft="@dimen/_70sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_70sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/roundbutton"
+                        android:padding="1dp"
+                        android:text="Select"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

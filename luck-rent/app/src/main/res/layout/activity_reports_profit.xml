@@ -1,0 +1,2206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.myreport.ReportsProfit">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+                <RelativeLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/topBar"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <!--Same Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/sameLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvInvoiceType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Invoice Type"
+                                        android:textColor="@color/blue"
+                                        android:visibility="gone" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/spLayoutInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/tvInvoiceType"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:visibility="gone"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spInvoiceType"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/invoiceTypeArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_arrow_add" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvOwner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/spLayoutInvoice"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Owner"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/spLayoutOwner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/tvOwner"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spOwner"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:layout_marginBottom="@dimen/_2sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/ownerArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_arrow_add" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvProperty"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/spLayoutOwner"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Property"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/spLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/tvProperty"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spProperty"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:layout_marginBottom="@dimen/_2sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint="All Properties"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/propertyArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_arrow_add" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:visibility="gone"
+                                        android:id="@+id/tvStatus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/spLayout"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Status"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:visibility="gone"
+                                        android:id="@+id/llStatus"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@id/tvStatus"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                                android:id="@+id/spStatus"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="@dimen/_6sdp"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:layout_marginRight="@dimen/_6sdp"
+                                                android:layout_marginBottom="@dimen/_2sdp"
+                                                android:background="@android:color/transparent"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:textSize="@dimen/_13sdp"
+                                                app:ms_background_color="@android:color/transparent"
+                                                app:ms_hide_arrow="true"
+                                                app:ms_hint="Status"
+                                                app:ms_hint_color="@color/blue"
+                                                app:ms_padding_left="@dimen/_12sdp"
+                                                app:ms_padding_right="@dimen/_5sdp"
+                                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                                app:ms_text_color="@color/blue" />
+
+                                            <LinearLayout
+                                                android:id="@+id/statusArrow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:paddingLeft="@dimen/_15sdp"
+                                                    android:paddingRight="@dimen/_15sdp"
+                                                    android:src="@drawable/ic_arrow_add" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvSelectPeriod"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/llStatus"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Select Period"
+                                        android:textColor="@color/blue" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/dateLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_below="@+id/tvSelectPeriod"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:background="@drawable/bg_edit"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tvFirstDate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:text="2021-07-01"
+                                            android:textColor="@color/bg_text" />
+
+                                        <TextView
+                                            android:id="@+id/tvDash"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:text="-"
+                                            android:textColor="@color/bg_text" />
+
+                                        <TextView
+                                            android:id="@+id/tvSecondDate"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center"
+                                            android:text="2021-07-01"
+                                            android:textColor="@color/bg_text" />
+
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/profitLayout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/dateLayout"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_30sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:background="@drawable/bg_language"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvProfit"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Total Profit/Loss $1700.00"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_14sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvProfitLoss"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvProfit"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="2021-08--28 - 101-3987 Stock Street"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+                                <!--Profit Lose Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutProfitLose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRevenueExpense"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <RelativeLayout
+                                                android:id="@+id/layoutRevenue"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRevenue"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Revenue"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRent"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/tvRevenue"
+                                                    android:layout_marginTop="-3dp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Total Rent Collected"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_9sdp" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalRent"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="$2000.00"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/layoutExpenses"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/layoutRevenue"
+                                                android:layout_marginTop="@dimen/_10sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvExpenses"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Expenses"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvExpense"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/tvExpenses"
+                                                    android:layout_marginTop="-3dp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Expenses Paid"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_9sdp" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalExpenses"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="-$300.00"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp" />
+                                            </RelativeLayout>
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvRev"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/cvRevenueExpense"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Revenue Detailed"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_14sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvTenant"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvRev"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTenant"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Tenant Detailed"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRnt"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTenant"
+                                                android:layout_marginTop="-3dp"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Total Expenses Paid"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_9sdp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentPayment"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentBottom="true"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="-$300.00"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvExpns"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/cvTenant"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Expenses Detailed"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/_14sdp"
+                                        android:textStyle="bold" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvExpense"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvExpns"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvExpenseDetailed"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Repairs/Maintenance"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRepair"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvExpenseDetailed"
+                                                android:layout_marginTop="-3dp"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="100.0% of total expenses"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_9sdp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRepairExpense"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentBottom="true"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="-$300.00"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+                                <!--Report Invoice Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutReportInvoice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:visibility="gone">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvReportInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTenantRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Tenant : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTenantNameRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toRightOf="@+id/tvTenantRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="Devang"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentalRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTenantRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Rental Address : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentalAddressRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/tvTenantNameRI"
+                                                android:layout_toRightOf="@+id/tvRentalRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="1112-908 Quayside"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentalRI"
+                                                android:layout_marginTop="@dimen/_10sdp"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Rent : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentPriceRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentalAddressRI"
+                                                android:layout_marginTop="@dimen/_10sdp"
+                                                android:layout_toRightOf="@+id/tvRentRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="$1600.00"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvLateFeeRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Late Fee : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvLateFeePriceRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentPriceRI"
+                                                android:layout_toRightOf="@+id/tvLateFeeRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="$50.00"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTotalRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvLateFeeRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Total : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTotalPriceRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvLateFeePriceRI"
+                                                android:layout_toRightOf="@+id/tvTotalRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="$1650.00"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPaymentRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTotalRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Payment Due : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPaymentDuePriceRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTotalPriceRI"
+                                                android:layout_toRightOf="@+id/tvPaymentRI"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="2021--09-06"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTotalAmountRI"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvPaymentRI"
+                                                android:layout_marginTop="@dimen/_10sdp"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="The total amount due as of 2021-09-01 is 165000"
+                                                android:textColor="@color/black" />
+
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                                <!--Reports Balance Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutReportsBalance"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:visibility="gone">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRentBalanceInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentInvoiceRB"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Rent Invoice"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentInVoiceDateRB"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentInvoiceRB"
+                                                android:layout_marginTop="-3dp"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="2021-09-01, due 2021-09-06"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_9sdp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentInvoicepriceRB"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentBottom="true"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="$1600.00"
+                                                android:textColor="@color/bg_text"
+                                                android:textSize="@dimen/_14sdp" />
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+
+                                    <RelativeLayout
+                                        android:id="@+id/layoutRentBalance"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/cvRentBalanceInvoice"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:background="@drawable/bg_language"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRentBalanceRB"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Rent Balance"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_14sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRentBalanceDateRB"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvRentBalanceRB"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="01-Aug 2021"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRentBalancePriceRB"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvRentBalanceRB"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Balance - $00.00"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRentBalanceRB"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/layoutRentBalance"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <RelativeLayout
+                                                android:id="@+id/layoutDevangRB"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvDevangRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Devang Tenant"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvDevangDateRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/tvDevangRB"
+                                                    android:layout_marginTop="-3dp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="bank Transfer, 2021-08-03"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_9sdp" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTenantPriceRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="$1600.00"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp" />
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/layoutRentRB"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/layoutDevangRB"
+                                                android:layout_marginTop="@dimen/_10sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Rent Invoice"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentBankDateRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/tvRentRB"
+                                                    android:layout_marginTop="-3dp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="2021-08--01, due 2021-08-06"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_9sdp" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentPriceRB"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_alignParentBottom="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="-$300.00"
+                                                    android:textColor="@color/bg_text"
+                                                    android:textSize="@dimen/_14sdp" />
+                                            </RelativeLayout>
+
+                                        </RelativeLayout>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+                                <!--Reports Rolls-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutReportsRolls"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:visibility="gone">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rollsTop"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:background="@drawable/bg_language"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRollsOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Rent Roll"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_14sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRollsDetailOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvRollsOrange"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="September 1, 2021"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvReportsRolls"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rollsTop"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="@dimen/_10sdp">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvOwnerRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Owner : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvOwnerNameRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toRightOf="@+id/tvOwnerRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="John Smith"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPropertyRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvOwnerRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Property Code : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPropertyCodeRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/tvOwnerNameRR"
+                                                android:layout_toRightOf="@+id/tvPropertyRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="001"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentalRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvPropertyRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Rental Address : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentalAddressRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvPropertyCodeRR"
+                                                android:layout_toRightOf="@+id/tvRentalRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="101-3987 Stock Street"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPropertyInRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentalAddressRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Property Info : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPropertyInfoRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentalAddressRR"
+                                                android:layout_toRightOf="@+id/tvPropertyInRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="575 sqft 1 bed 1 bath"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvPropertyInRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Rent $ : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentPriceRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvPropertyInfoRR"
+                                                android:layout_toRightOf="@+id/tvRentRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="$1650.00"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTermRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Term : "
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvTermDateRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvRentPriceRR"
+                                                android:layout_marginLeft="0dp"
+                                                android:layout_marginTop="0dp"
+                                                android:layout_toRightOf="@+id/tvTermRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:singleLine="true"
+                                                android:text="1 Aug 2021 to 31 Jul 2022"
+                                                android:textColor="@color/black" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvDepositRR"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTermRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="Deposit held $ :"
+                                                android:textColor="@color/black"
+                                                android:textStyle="bold" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvDepositHeld"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/tvTermDateRR"
+                                                android:layout_toRightOf="@+id/tvDepositRR"
+                                                android:fontFamily="@font/poppins_regular"
+                                                android:text="800.00"
+                                                android:textColor="@color/black" />
+
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                                <!--Reports Income Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutReportsIncome"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:visibility="gone">
+
+                                    <RelativeLayout
+                                        android:id="@+id/incomeTop"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:background="@drawable/bg_language"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvIncomeOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Income Statement"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_14sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvIncomeDetailOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvIncomeOrange"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="1 Jan 2020     To     31 Dec 2020"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvReportsIncome"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/incomeTop"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginVertical="@dimen/_5sdp">
+
+                                            <RelativeLayout
+                                                android:id="@+id/rentalAddressLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentalRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Rental Address : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentalAddressRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="123 Rock Road, Vancouver"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/annualRentLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/rentalAddressLayout"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulIncomeRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Annual Rent Income : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulRentIncomeRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$15000.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/rentFirstLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/annualRentLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvFirstRentRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Rent 1 Nov 2020 : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvFirstRentDateRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1600"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/rentSecondLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/rentFirstLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvSecondRentRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Rent 1 Dec 2020 : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvSecondRentDateRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1600"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/annualExpenseLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/rentSecondLayout"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulExpRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Annual Expense (20%) : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulEXpenseRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$2000.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/applianceLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/annualExpenseLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvApplianceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Appliance Repair : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAppliancePriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1000"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/cleaningLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/applianceLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCleaningRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Cleaning : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCleaningPriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$500"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/advertisingLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cleaningLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAdvertisingRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Advertising : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAdvertisingPriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$500"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/operatingLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/advertisingLayout"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Net Operating Income : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetOperatingRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$13000.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/mortgageLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/operatingLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvMortgageRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Mortgage Interest : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvMortgagePriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$500"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/netIncomeLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/mortgageLayout"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetIncomeRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Net Income : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetIncomePriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$12500.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/taxableLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/netIncomeLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTaxableRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Taxable Income : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTaxablePriceRIncome"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$12500.00"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+                                <!--Report CashFlow Layout-->
+                                <RelativeLayout
+                                    android:id="@+id/layoutCashFlow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/sameLayout"
+                                    android:visibility="gone">
+
+                                    <RelativeLayout
+                                        android:id="@+id/cashFlowTop"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:background="@drawable/bg_language"
+                                        android:paddingStart="@dimen/_5sdp"
+                                        android:paddingTop="@dimen/_10sdp"
+                                        android:paddingBottom="@dimen/_10sdp"
+                                        android:visibility="gone">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCashOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Net Cash Flow Report"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_14sdp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCashDetailOrange"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvCashOrange"
+                                            android:layout_centerHorizontal="true"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="1 Jan 2020     To     31 Dec 2020"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_12sdp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvReportsCashFlow"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/cashFlowTop"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        app:cardCornerRadius="@dimen/_5sdp">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginVertical="@dimen/_5sdp">
+
+                                            <RelativeLayout
+                                                android:id="@+id/rentalAddressLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentalRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Rental Address : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRentalAddressRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="123 Rock Road, Vancouver"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/annualRentLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/rentalAddressLayoutRC"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulIncomeRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Annual Rent Income : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvAnnulRentIncomeRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$15000.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/totalRentalLayout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/annualRentLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalRentalRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Rental Income : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalRentalPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1600"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/totalLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/totalRentalLayout"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalIncomeRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Income : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalIncomePriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1600"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/operatingLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/totalLayoutRC"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvOperatingRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Operating Expenses "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/cleaningLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/operatingLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCleaningRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Cleaning Janitorial : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCleaningPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$300"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/repairLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/cleaningLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvRepairRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Repair &amp; Maintenance : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalRepairPrice"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$500"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/totalOperatingLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/repairLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalOperatingRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Operating Expenses : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalOperatingPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$500"
+                                                    android:textColor="@color/black" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/netOperatingLayoutRc"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/totalOperatingLayoutRC"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Net Operating Income : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetOperatingPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$13000.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/mortgageLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/netOperatingLayoutRc"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvMortgageRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Mortgage &amp; Loan : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/mortagePaymentLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/mortgageLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvmortagePaymentRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="Mortgage Payment : "
+                                                    android:textColor="@color/bg_text"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvmortagePaymentPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_marginEnd="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$0"
+                                                    android:textColor="@color/bg_text" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/interestLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/mortagePaymentLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvInterestRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Interest : "
+                                                    android:textColor="@color/bg_text"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvInterestPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_marginEnd="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$0"
+                                                    android:textColor="@color/bg_text" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/principalLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/interestLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvPrincipalRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Principal : "
+                                                    android:textColor="@color/bg_text"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvPrincipalPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_marginEnd="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$0"
+                                                    android:textColor="@color/bg_text" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/totalMortageLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/interestLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalMortgageRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Principal : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalMortgagePriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_marginEnd="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$0"
+                                                    android:textColor="@color/bg_text" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/capitalLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/totalMortageLayoutRC"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCapitalRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Capital Expenses "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/totalCapitalLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/capitalLayoutRC"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalCapitalRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Total Capital Expenses : "
+                                                    android:textColor="@color/black"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvTotalCapitalExpensesPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:layout_marginEnd="@dimen/_20sdp"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$"
+                                                    android:textColor="@color/bg_text" />
+
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/cashFlowLayoutRC"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/totalCapitalLayoutRC"
+                                                android:background="@color/bg_income"
+                                                android:padding="@dimen/_5sdp">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetCashFlowRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:text="Net Cash Flow : "
+                                                    android:textColor="@color/orange"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvNetCashFlowPriceRC"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:fontFamily="@font/poppins_regular"
+                                                    android:singleLine="true"
+                                                    android:text="$1300.00"
+                                                    android:textColor="@color/orange" />
+
+                                            </RelativeLayout>
+
+                                        </RelativeLayout>
+                                    </androidx.cardview.widget.CardView>
+                                </RelativeLayout>
+<!--                                Unpaid Button-->
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:visibility="gone"
+                                    android:id="@+id/btnMark"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_margin="@dimen/_10sdp"
+                                    android:background="@drawable/bg_download_reports"
+                                    android:backgroundTint="@color/red1"
+                                    android:text="Mark All Unpaid Invoices Shown Here As Paid"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white" />
+                                <!--Button Layout-->
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/layoutButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/layoutProfitLose"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginBottom="@dimen/_30sdp"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnDownload"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_download_reports"
+                                        android:backgroundTint="@color/blueBtn"
+                                        android:text="Download"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/btnShare"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/roundbutton"
+                                        android:text="Share"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/white" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/contentExpenseDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.expense.ExpenseDetail">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/topBar"
+                    android:background="@drawable/ic_subscription_bg">
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fillViewport="true">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:id="@+id/rlHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_15sdp"
+                                android:layout_marginBottom="@dimen/_10sdp">
+
+
+                                <RelativeLayout
+                                    android:id="@+id/rlPropertyTenant"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="@dimen/_7sdp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llPropertyTenant"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvPropertyLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Property"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRepeatLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:text="Repeat"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llPropertyTenantDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llPropertyTenant"
+
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvPropertyId"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="123-231"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRepeat"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ellipsize="marquee"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:singleLine="true"
+                                            android:text="Never"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlExpenseAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rlPropertyTenant"
+                                    android:layout_marginTop="@dimen/_25sdp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llExpenseAmount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvExpenseCategoryLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Expense Category"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvAmountLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:text="Amount"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llExpenseAmountDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llExpenseAmount"
+                                        android:layout_marginTop="-3dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvExpenseCategory"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Mileage"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvAmount"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ellipsize="marquee"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:singleLine="true"
+                                            android:text="$ 200"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlDateRepeat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/rlExpenseAmount"
+                                    android:layout_marginTop="@dimen/_25sdp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llDateRepeat"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvTransactionDateLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Transaction Detail"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvPayeeLAbel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Payee"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llrlDateRepeatDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llDateRepeat"
+                                        android:layout_marginTop="-3dp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvTransactionDate"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="2021-09-09"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvPayee"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:paddingStart="@dimen/_15sdp"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Done"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlTax"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rlDateRepeat"
+                                    android:layout_marginTop="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvTransactionLAbel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:gravity="center_vertical"
+                                        android:paddingTop="@dimen/_5sdp"
+                                        android:paddingEnd="@dimen/_5sdp"
+                                        android:text="Transaction Paid"
+                                        android:textColor="@color/orange"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvTransactionPaid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvTransactionLAbel"
+                                        android:layout_marginTop="-3dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_medium"
+                                        android:gravity="center_vertical"
+                                        android:paddingEnd="@dimen/_5sdp"
+                                        android:paddingBottom="@dimen/_5sdp"
+                                        android:text="Yes"
+                                        android:textColor="@color/Lightgrey"
+                                        android:textSize="@dimen/_12sdp" />
+
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlExpense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rlHeader"
+                                android:background="@color/bgWhite">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlExpenseDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="@dimen/_15sdp"
+                                    android:paddingTop="@dimen/_15sdp"
+                                    android:paddingEnd="@dimen/_15sdp"
+                                    android:paddingBottom="@dimen/_10sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvExpenseDescriptionLabel"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_bold"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="Expense Description"
+                                        android:textColor="@color/darkBlue"
+                                        android:textSize="@dimen/_14sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvExpenseDescription"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvExpenseDescriptionLabel"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center_vertical"
+                                        android:text="Non Taxable Lorem ipsum is a placeholder text commonly
+used to demonstrate the visual form of a
+document or a typeface without relying on
+meaningful content."
+                                        android:textColor="@color/darkBlue"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_90sdp"
+                                        android:layout_below="@id/tvExpenseDescription"
+                                        android:nestedScrollingEnabled="true"
+                                        android:scrollbars="none">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivReciept"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/_15sdp"
+                                            android:src="@drawable/rec" />
+
+                                    </ScrollView>
+
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rlExpense"
+                                android:layout_marginStart="@dimen/_15sdp"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnDownload"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@id/tvPropertyAddress"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_weight=".5"
+                                    android:background="@drawable/roundbutton"
+                                    android:backgroundTint="@color/blueBtn"
+                                    android:padding="10dp"
+                                    android:text="Download"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnShare"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@id/tvPropertyAddress"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_10sdp"
+                                    android:layout_weight=".5"
+                                    android:background="@drawable/roundbutton"
+                                    android:padding="10dp"
+                                    android:text="Share"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_13sdp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </RelativeLayout>
+
+                    </ScrollView>
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:visibility="gone"
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </RelativeLayout>
+</layout>

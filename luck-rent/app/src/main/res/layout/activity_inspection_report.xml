@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.inspectionreport.InspectionReport">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+
+                <RelativeLayout
+                    android:id="@+id/mainLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/topBar"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/bg_buttons"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvMoveIn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/orange"
+                            app:cardCornerRadius="@dimen/_25sdp"
+                            app:cardElevation="0dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMoveIn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Move-in"
+                                android:textColor="@color/white" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvDuringTenancy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/f3White"
+                            app:cardCornerRadius="@dimen/_25sdp"
+                            app:cardElevation="0dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDuringTenancy"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="During Tenancy"
+                                android:textColor="@color/sand" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvMoveOut"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/f3White"
+                            app:cardCornerRadius="@dimen/_25sdp"
+                            app:cardElevation="0dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMoveOut"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:text="Move-Out"
+                                android:textColor="@color/sand" />
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layoutButton"
+                        android:scrollbars="none">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/mainLayout1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlLandlordAutomatic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_automatic"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingVertical="@dimen/_5sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvLoadLandlord"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Auto Fill Info"
+                                        android:textColor="@color/white" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:src="@drawable/ic_resource_true" />
+
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLandLord"
+                                    android:layout_below="@id/rlLandlordAutomatic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Landlord"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstNameLand"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvLandLord"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="First Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etFirstNameLand"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvFirstNameLand"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMiddleNameLand"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etFirstNameLand"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Middle Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etMiddleNameLand"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvMiddleNameLand"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLastNameLand"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etMiddleNameLand"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Last Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etLastNameLand"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvLastNameLand"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout1Land"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etLastNameLand"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Site/Unit"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Street No &amp; Name"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout2Land"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/linearLayout1Land"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSiteLand"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="number"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etStreetLand"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout3Land"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout2Land"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Province"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Postal Code"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout4Land"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/linearLayout3Land"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etProvinceLand"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etPostalCodeLand"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/mainLayout1"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlTenantAutomatic"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_automatic"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingVertical="@dimen/_5sdp">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvLoadTenant"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:text="Auto Fill Info"
+                                        android:textColor="@color/white" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:src="@drawable/ic_resource_true" />
+
+                                </RelativeLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTenant"
+                                    android:layout_below="@+id/rlTenantAutomatic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="@dimen/_5sdp"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Tenant"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvFirstNameTen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvTenant"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="First Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etFirstNameRen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvFirstNameTen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMiddleNameRen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etFirstNameRen"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Middle Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etMiddleNameTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvMiddleNameRen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLastNameTen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etMiddleNameTen"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Last Name"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etLastNameTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvLastNameTen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAddressTen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etLastNameTen"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Address"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etAddressTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvAddressTen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout1Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etAddressTen"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Site/Unit"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Street No &amp; Name"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout2Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/linearLayout1Ten"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSiteTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etStreetTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout3Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout2Ten"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Province"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Postal Code"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout4Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/linearLayout3Ten"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etProvinceTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etPostalCodeTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:inputType="text"
+                                        android:paddingStart="@dimen/_20sdp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvProfession"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout4Ten"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Inspection"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etProfessionDateTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvProfession"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout5Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etProfessionDateTen"
+                                    android:layout_marginVertical="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Move-In Date"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_20sdp"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:text="Move-Out Date"
+                                            android:textColor="@color/darkBlue" />
+                                    </RelativeLayout>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/linearLayout6Ten"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/linearLayout5Ten"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvMoveInDateTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center"
+                                        android:inputType="text"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvMoveOutDateTen"
+                                        android:layout_width="0dp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/bg_edit"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:gravity="center"
+                                        android:inputType="text"
+                                        android:singleLine="true"
+                                        android:textColor="@color/blue"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMoveInTen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/linearLayout6Ten"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Move-In Inspection Date"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etMoveInInspectionDateTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvMoveInTen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMoveOutTen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/etMoveInInspectionDateTen"
+                                    android:layout_marginStart="@dimen/_20sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Move-Out Inspection Date"
+                                    android:textColor="@color/blue" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/tvMoveOutInspectionTen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvMoveOutTen"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLegalName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvMoveOutInspectionTen"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:layout_marginTop="@dimen/_20sdp"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:text="Legal Name of Tenant Agent"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/etLegalName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/tvLegalName"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:background="@drawable/bg_edit"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:inputType="text"
+                                    android:paddingStart="@dimen/_20sdp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/_13sdp" />
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/tvAddComments"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_below="@+id/etLegalName"-->
+<!--                                    android:layout_marginStart="@dimen/_15sdp"-->
+<!--                                    android:layout_marginTop="@dimen/_30sdp"-->
+<!--                                    android:fontFamily="@font/poppins_regular"-->
+<!--                                    android:text="Add Comments"-->
+<!--                                    android:textColor="@color/darkBlue"-->
+<!--                                    android:textStyle="bold"-->
+<!--                                    android:visibility="gone" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                                    android:id="@+id/etAddComments"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="@dimen/_120sdp"-->
+<!--                                    android:layout_below="@+id/tvAddComments"-->
+<!--                                    android:layout_marginTop="@dimen/_10sdp"-->
+<!--                                    android:background="@drawable/bg_dec_add"-->
+<!--                                    android:fontFamily="@font/poppins_regular"-->
+<!--                                    android:gravity="top"-->
+<!--                                    android:inputType="textCapSentences|textNoSuggestions|textMultiLine"-->
+<!--                                    android:maxLines="6"-->
+<!--                                    android:padding="@dimen/_5sdp"-->
+<!--                                    android:textColor="@color/bg_text"-->
+<!--                                    android:textSize="@dimen/_13sdp"-->
+<!--                                    android:visibility="gone" />-->
+
+<!--                                <androidx.appcompat.widget.AppCompatTextView-->
+<!--                                    android:id="@+id/tvPhotos"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_below="@+id/etAddComments"-->
+<!--                                    android:layout_marginStart="@dimen/_20sdp"-->
+<!--                                    android:layout_marginTop="@dimen/_30sdp"-->
+<!--                                    android:fontFamily="@font/poppins_regular"-->
+<!--                                    android:text="Inspection Photos Move-in Time"-->
+<!--                                    android:textColor="@color/blue"-->
+<!--                                    android:visibility="gone" />-->
+
+<!--                                <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                                    android:visibility="visible"-->
+<!--                                    android:id="@+id/layoutImages"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_below="@+id/etLegalName"-->
+<!--                                    android:layout_marginHorizontal="@dimen/_5sdp"-->
+<!--                                    android:orientation="horizontal"-->
+<!--                                    android:padding="@dimen/_5sdp"-->
+<!--                                    android:weightSum="3">-->
+
+<!--                                    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="match_parent"-->
+<!--                                        android:layout_margin="@dimen/_3sdp"-->
+<!--                                        android:layout_weight="1"-->
+<!--                                        android:gravity="center"-->
+<!--                                        android:orientation="vertical">-->
+
+<!--                                        <androidx.recyclerview.widget.RecyclerView-->
+<!--                                            android:id="@+id/rvPhotos"-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent" />-->
+<!--                                       -->
+<!--                                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--                                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/btnNext"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_below="@+id/etLegalName"
+                                    android:layout_marginHorizontal="@dimen/_20sdp"
+                                    android:layout_marginVertical="@dimen/_30sdp"
+                                    android:background="@drawable/roundbutton"
+                                    android:padding="10dp"
+                                    android:text="Next"
+                                    android:textColor="@color/white" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true"
+                android:visibility="gone">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.luck_rent_android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/map_key" />
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Luckrentandroid"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.main.order.DigitalInspectioOrder"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.RentCollection"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.property.TenantContact"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.applicationform.ApplicationForm"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.DataImport"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.DataBackup"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.DigitalSignature"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.Insurance"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.CreditCheck"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.RentEstimation"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.transaction.Transaction"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.invoice.InvoicePreview"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.property.UnitPreview"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.property.BuildingPreview"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorViewProperty"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.inventory.InventoryMain"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.contractormodule.JobStatus"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.property.AddPM"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.property.AddBuilding"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.findtradesperson.FIndTradesPerson"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.task.TaskList"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.inventory.InventoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.order.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.rentermodule.BuyTenantInsurance"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.description.Description"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorJobComplete"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.rentermodule.RenterNewProperties"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.rentermodule.RenterUnpaidInvoice"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.rentermodule.RenterReport"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.rentermodule.RenterDashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorOverview"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorRentProperty"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorReport"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorInvoice"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.contractormodule.ContractorDashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.Offline"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.adds.analytics.AnalyticsScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.inspectionreport.Tenant"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.inspectionreport.Tenancy"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.inspectionreport.InspectionEntry"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.inspectionreport.InspectionReport"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.property.LeaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.AddContact"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.property.OverViewProperty"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.property.AddProperty"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.myreport.ReportsProfit"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.myreport.Reports"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.chat.AudioCall"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".ui.main.chat.OpenCamera"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".ui.main.chat.Chat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.main.chat.Messages"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.profile.EditProfile"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.profile.Profile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".ui.main.adds.Details"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.adds.Accept"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.notification.NotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.faqs.FaqsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.adds.MyAds"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.invoice.InvoiceDetail"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.invoice.AddInvoice"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.expense.AddExpense"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.expense.ExpenseDetail"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.expense.ExpenseListing"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.payment.PaymentListing"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.LocationSelection"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.payment.AddPayment"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.adds.Request"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.renter.Renter"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.property.PropertiesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.dashboard.Dashboard"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.subscription.SubscriptionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.Login"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.NewPassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.SignupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.OtpCode"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.ForgetPassword"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.Language"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.auth.Choose"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".welcome.Welcome"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.adds.MakeAdd"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.Splash"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

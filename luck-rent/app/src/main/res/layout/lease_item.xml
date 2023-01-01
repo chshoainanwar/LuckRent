@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_10sdp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPropertyId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="@dimen/_3sdp"
+                android:paddingTop="@dimen/_3sdp"
+
+                android:text="Add Invoice"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPropertyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPropertyId"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="-10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_3sdp"
+                android:text="Add Payment"
+                android:textColor="@color/sand"
+                android:textSize="@dimen/_8sdp" />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

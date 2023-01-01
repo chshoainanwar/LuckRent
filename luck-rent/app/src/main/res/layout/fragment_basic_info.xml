@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.renter.BasicInfoFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_alignParentRight="true"-->
+                <!--                    android:src="@drawable/ic_circle" />-->
+
+                <RelativeLayout
+                    android:id="@+id/rlAutomatic"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/roundbutton"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLoad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Load Renter"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_resource_true" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/BasicInfoTV"
+                    android:layout_below="@+id/rlAutomatic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Basic Information"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/BasicInfoTV"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/typeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Type"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/spLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@id/typeTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                android:id="@+id/spType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_2sdp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_13sdp"
+                                app:ms_background_color="@android:color/transparent"
+                                app:ms_hide_arrow="true"
+                                app:ms_hint="Lead / Applicant / Tenant"
+                                app:ms_hint_color="@color/blue"
+                                app:ms_padding_left="@dimen/_12sdp"
+                                app:ms_padding_right="@dimen/_5sdp"
+                                app:ms_popup_padding_left="@dimen/_8sdp"
+                                app:ms_popup_padding_right="@dimen/_13sdp"
+                                app:ms_popup_padding_top="@dimen/_3sdp"
+                                app:ms_text_color="@color/blue" />
+
+                            <LinearLayout
+                                android:id="@+id/typeArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:paddingRight="@dimen/_15sdp"
+                                    android:src="@drawable/ic_blue_arrow" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/firstNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spLayout"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="First Name"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/firstNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/firstNameTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lastNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/firstNameET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Last Name"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/lastNameET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/lastNameTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrentAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lastNameET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Current Address"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/tvCurrentAddress"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPostalCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etAddress"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Postal Code"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPostalCodes"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/tvPostalCode"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDurationState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etPostalCodes"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Duration Stayed"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etDurationState"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/tvDurationState"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/emailTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/etDurationState"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Email"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/emailET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/emailTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/phoneTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/emailET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Phone No"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/phoneET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/phoneTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/otherTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Other Messaging App"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/otherET"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/otherTV"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/bg_edit"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:textColor="@color/blue" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/identityCardTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/otherET"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Add Identification Card"
+                        android:textColor="@color/blue" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/identityCardTV"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@drawable/picture_bg">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/pickImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_renter_img" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.inspectionreport.Tenancy">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/top_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topBar">
+
+            <RelativeLayout
+                android:id="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bg_tenancy" />
+
+            <ScrollView
+                android:layout_below="@+id/emptyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/firstLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStartTenancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Start of Tenancy"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvListTenancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvStartTenancy"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="List Repairs to be complete at the start of the Tenancy : "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RelativeLayout
+                    android:layout_below="@id/tvListTenancy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/faWhite"
+                    android:layout_marginVertical="@dimen/_10sdp">
+
+
+                    <EditText
+                        android:id="@+id/etFirstComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:background="@drawable/bg_inspection_comment"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/bg_text"
+                        android:textColorHint="@color/bg_text"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <RadioGroup
+                        android:id="@+id/firstRg"
+                        android:layout_below="@+id/etFirstComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/firstAgreeRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:buttonTint="@color/hardSand"
+                            android:gravity="top"
+                            android:text="Tenant AGREES that this report fairly represents the condition of the rental unit"
+                            android:textColor="@color/bg_text"
+                            android:textSize="@dimen/_12sdp" />
+                        <RadioButton
+                            android:id="@+id/firstDisagreeRB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:gravity="top"
+                            android:text="Tenant DO NOT AGREE that this report fairly represents the condition of the rental until for the following reasons : "
+                            android:textColor="@color/bg_text"
+                            android:buttonTint="@color/hardSand"
+                            android:textSize="@dimen/_12sdp"/>
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/etSecondComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_below="@+id/firstRg"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:layout_marginVertical="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_30sdp"
+                        android:background="@drawable/bg_inspection_comment"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/bg_text"
+                        android:textColorHint="@color/bg_text"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/secondLayout"
+                    android:layout_below="@+id/firstLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEndTenancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="End of Tenancy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvListTenancyEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvEndTenancy"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="List Damage to the rental unit or residential property for which the tenant is responsible:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:layout_below="@id/tvListTenancyEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/faWhite"
+                        android:layout_marginVertical="@dimen/_10sdp">
+
+
+                        <EditText
+                            android:id="@+id/etThirdComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginVertical="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            android:background="@drawable/bg_inspection_comment"
+                            android:gravity="top"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/bg_text"
+                            android:textColorHint="@color/bg_text"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <RadioGroup
+                            android:id="@+id/secondRg"
+                            android:layout_below="@+id/etThirdComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/secondAgreeRB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:buttonTint="@color/hardSand"
+                                android:gravity="top"
+                                android:text="Tenant AGREES that this report fairly represents the condition of the rental unit"
+                                android:textColor="@color/bg_text"
+                                android:textSize="@dimen/_12sdp" />
+                            <RadioButton
+                                android:id="@+id/secondDisagreeRB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="Tenant DO NOT AGREE that this report fairly represents the condition of the rental until for the following reasons : "
+                                android:textColor="@color/bg_text"
+                                android:buttonTint="@color/hardSand"
+                                android:textSize="@dimen/_12sdp"
+                                android:gravity="top"/>
+                        </RadioGroup>
+
+                        <EditText
+                            android:id="@+id/etFourthComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_below="@+id/secondRg"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:layout_marginVertical="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            android:background="@drawable/bg_inspection_comment"
+                            android:gravity="top"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/bg_text"
+                            android:textColorHint="@color/bg_text"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@+id/secondLayout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginVertical="@dimen/_30sdp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="10dp"
+                    android:text="Next"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.main.profile.EditProfile">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:background="@drawable/profile_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_back"
+                        android:padding="@dimen/_20sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Profile Edit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout1"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="@dimen/_20sdp"
+                        android:src="@drawable/profile_image"
+                        app:civ_border_color="@color/orange" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_165sdp"
+                        android:layout_marginTop="@dimen/_45sdp"
+                        android:elevation="@dimen/_30sdp"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:srcCompat="@drawable/circle_camera" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/profileLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:background="@color/white">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvfName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_50sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="First Name"
+                                android:textColor="@color/bg_text" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvfName"
+                                android:background="@drawable/bg_edit"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="John"
+                                android:inputType="text"
+                                android:paddingStart="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvlName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etFirstName"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:inputType="text"
+                                android:text="Last Name"
+                                android:textColor="@color/bg_text" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvlName"
+                                android:background="@drawable/bg_edit"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="Smith"
+                                android:inputType="text"
+                                android:paddingStart="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etLastName"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Phone Number"
+                                android:textColor="@color/bg_text" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvPhone"
+                                android:background="@drawable/bg_edit"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="789-4456-123"
+                                android:inputType="number"
+                                android:paddingStart="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etPhoneNumber"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Email"
+                                android:textColor="@color/bg_text" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvEmail"
+                                android:background="@drawable/bg_edit"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="johnsmith@rentluck.com"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_14sdp" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAddr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etEmail"
+                                android:layout_marginStart="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Address"
+                                android:textColor="@color/bg_text" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvAddr"
+                                android:background="@drawable/bg_edit"
+                                android:fontFamily="@font/poppins_regular"
+                                android:hint="33 street US"
+                                android:inputType="textEmailAddress"
+                                android:paddingStart="@dimen/_20sdp"
+                                android:singleLine="true"
+                                android:textColor="@color/bg_text"
+                                android:textColorHint="@color/bg_text"
+                                android:textSize="@dimen/_14sdp" />
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profileLayout1"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/bg_language">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLanguage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_17sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center"
+                            android:text="Language"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18sdp"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_below="@id/tvLanguage"
+                            android:layout_marginTop="@dimen/_1sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                                    android:id="@+id/spLanguage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:outlineAmbientShadowColor="@color/black"
+                                    android:outlineSpotShadowColor="@color/black"
+                                    android:singleLine="true"
+                                    android:textColor="@color/white"
+                                    android:textColorHighlight="@color/black"
+                                    android:textColorHint="@color/bg_text"
+                                    android:textSize="@dimen/_13sdp"
+                                    app:ms_background_color="@android:color/transparent"
+                                    app:ms_hide_arrow="true"
+                                    app:ms_hint_color="@color/white"
+                                    app:ms_padding_left="@dimen/_12sdp"
+                                    app:ms_padding_right="@dimen/_5sdp"
+                                    app:ms_popup_padding_left="@dimen/_8sdp"
+                                    app:ms_popup_padding_right="@dimen/_13sdp"
+                                    app:ms_popup_padding_top="@dimen/_3sdp"
+                                    app:ms_text_color="@color/blue" />
+
+                                <LinearLayout
+                                    android:id="@+id/paymentMethodArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:paddingLeft="@dimen/_15sdp"
+                                        android:paddingRight="@dimen/_15sdp"
+                                        android:src="@drawable/ic_language_arrow" />
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

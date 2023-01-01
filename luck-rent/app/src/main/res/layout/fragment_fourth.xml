@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.applicationform.FourthFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvApplicantReferencesLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="F) APPLICANT'S REFERENCES"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProfessional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvApplicantReferencesLabel"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="PROFESSIONAL AND/OR LANDLORD\nREFERENCES PREFERRED"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvFirstReference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProfessional"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="1) First Reference"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFirstReference"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Name"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etName"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Relationship"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etRelationship"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvRelationship"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContactPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etRelationship"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Phone"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvContactPhone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvContactEmail"
+                android:layout_below="@+id/etContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Email"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etContactEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvContactEmail"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvSecondReference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etContactEmail"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="2) Second Reference"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2ndRefName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSecondReference"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Name"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et2ndRefName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tv2ndRefName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2ndRefRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et2ndRefName"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Relationship"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et2ndRefRelationship"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tv2ndRefRelationship"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2ndRefContactPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et2ndRefRelationship"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Phone"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et2ndRefContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tv2ndRefContactPhone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2ndRefContactEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et2ndRefContactPhone"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Email"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et2ndRefContactEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tv2ndRefContactEmail"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvEmergencyContactLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et2ndRefContactEmail"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="G) EMERGENCY CONTACT"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmergencyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmergencyContactLabel"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Name"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmergencyName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvEmergencyName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:textColorHint="@color/blue"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmergencyRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmergencyName"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Relationship"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmergencyRelationship"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvEmergencyRelationship"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:textColorHint="@color/blue"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmergencyContactPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmergencyRelationship"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Phone"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmergencyContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvEmergencyContactPhone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:textColorHint="@color/blue"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmergencyContactEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmergencyContactPhone"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Contact Email"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmergencyContactEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvEmergencyContactEmail"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/blue"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvApplicantsSignatureLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEmergencyContactEmail"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="H) APPLICANT'S SIGNATURE"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvApplicantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvApplicantsSignatureLabel"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Applicant Name"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etApplicantName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvApplicantName"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_edit"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:textColorHint="@color/blue"
+                android:paddingStart="@dimen/_20sdp"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateSigned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etApplicantName"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Date Signed"
+                android:textColor="@color/blue" />
+
+            <RelativeLayout
+                android:id="@+id/rlDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/tvDateSigned"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/bg_edit">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSignedDatePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="21/12/2021"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:textColor="@color/bg_text"
+                    android:textColorHint="@color/bg_text" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSignedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:src="@drawable/ic_calender" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvApplicantSignature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlDateLayout"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Applicant Signature"
+                android:textColor="@color/blue" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etApplicantSignature"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/tvApplicantSignature"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/bg_signature"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:paddingVertical="@dimen/_20sdp"
+                android:singleLine="false"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_12sdp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@id/etApplicantSignature"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_40sdp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="10dp"
+                android:text="Submit"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+</layout>

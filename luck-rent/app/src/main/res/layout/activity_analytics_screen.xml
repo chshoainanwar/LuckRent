@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/contentAnalytics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bgWhite"
+        tools:context=".ui.main.adds.analytics.AnalyticsScreen">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/analytics_top_bar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rlMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_10sdp">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Analytics Report"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_below="@+id/label"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_130sdp"
+                            android:layout_weight=".5"
+                            android:background="@drawable/bg_dashboard_chart"
+                            android:backgroundTint="@color/white"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/tvRevenueLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Revenue"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                            <com.github.mikephil.charting.charts.BarChart
+                                android:id="@+id/revenueBarChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_below="@id/tvRevenueLabel"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp" />
+
+                            <TextView
+                                android:id="@+id/tvRevenue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/revenueBarChart"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="$ 20000"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_150sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight=".5"
+                            android:background="@drawable/bg_dashboard_chart"
+                            android:backgroundTint="@color/light_orange"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/tvExpenseLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Expense"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.ramijemli.percentagechartview.PercentageChartView
+                                android:id="@+id/ExpenseProgress"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_90sdp"
+                                android:layout_below="@id/tvExpenseLabel"
+                                app:pcv_animDuration="10"
+                                app:pcv_animInterpolator="anticipate_overshoot"
+                                app:pcv_backgroundBarColor="@color/white"
+                                app:pcv_backgroundBarThickness="@dimen/_5sdp"
+                                app:pcv_mode="ring"
+                                app:pcv_orientation="counter_clockwise"
+                                app:pcv_progress="65"
+                                app:pcv_progressBarThickness="@dimen/_5sdp"
+                                app:pcv_progressColor="@color/darkBlue"
+                                app:pcv_startAngle="90" />
+
+
+                            <TextView
+                                android:id="@+id/tvExpense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/ExpenseProgress"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="$ 20000"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_below="@id/llMain"
+                        android:layout_marginTop="-10dp"
+                        android:weightSum="1">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_150sdp"
+                            android:layout_gravity="center"
+                            android:layout_weight=".5"
+                            android:background="@drawable/bg_dashboard_chart"
+                            android:backgroundTint="@color/pink"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/tvTotalUnitsLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Total Units"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivTotalUnits"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/tvTotalUnits"
+                                android:layout_below="@id/tvTotalUnitsLabel"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_group_61" />
+
+
+                            <TextView
+                                android:id="@+id/tvTotalUnits"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:gravity="end"
+                                android:text="05"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_18sdp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_130sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_weight=".5"
+                            android:background="@drawable/bg_dashboard_chart"
+                            android:backgroundTint="@color/white"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/tvProfitLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Profit"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:id="@+id/profitChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_below="@id/tvProfitLabel"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp" />
+
+                            <TextView
+                                android:id="@+id/tvProfit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/profitChart"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:text="$ 20000"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_below="@id/rlMain"
+                    android:background="@drawable/bg_dashboard_chart"
+                    android:backgroundTint="@color/purple"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlSecond"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTotalActivity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:text="Total Activity"
+                            android:textColor="@color/lightPurple"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.example.luck_rent_android.ui.main.spinn.MaterialSpinner
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:background="@color/purple"
+                            android:hint="Weekly"
+                            android:textSize="@dimen/_12sdp"
+                            app:ms_arrow_tint="@color/lightPurple"
+                            app:ms_background_color="@color/purple"
+                            app:ms_hint="Weekly"
+                            app:ms_text_color="@color/lightPurple"
+
+                            />
+
+                    </RelativeLayout>
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/totalActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rlSecond"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_5sdp" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

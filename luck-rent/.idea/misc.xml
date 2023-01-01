@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/bg_circle.xml" value="0.1475" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/bg_edit.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/bg_inspection_comment.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/circle_outer_stroke.xml" value="0.1475" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_accept.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_activate.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_archive.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_arrow.xml" value="0.184" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_arrow_black.xml" value="0.2655" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_blue_arrow.xml" value="0.2655" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_calender.xml" value="0.1" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_call.xml" value="0.167" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_circle1.xml" value="0.1475" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_copy.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_copy1.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_decline.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_delete.xml" value="0.167" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_dollar.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_edit.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_location.xml" value="0.167" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_luckrent_logo.xml" value="0.167" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_mark_as_paid.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_mark_as_unpaid.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_orange_circle_open.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_search.xml" value="0.167" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_side_arrow.xml" value="0.1115" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_unpaid2.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/drawable/ic_warning.xml" value="0.242" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/acitivity_signup.xml" value="0.5" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_accept.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_building.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_contact.xml" value="0.5" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_expense.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_invoice.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_payment.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_pm.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_add_property.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_application.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_application_form.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_building_preview.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_buy_tenant_insurance.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_chat.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_dashboard.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_invoice.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_job_complete.xml" value="0.19202898550724637" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_overview.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_rent_property.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_report.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_contractor_view_property.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_credit_check.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_data_backup.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_data_import.xml" value="0.5" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_description.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_details.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_digital_inspectio_order.xml" value="0.21248396750748183" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_digital_signature.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_edit_profile.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_expense_detail.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_find_trades_person.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_inspection_entry.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_inspection_report.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_insurance.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_inventory.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_inventory_main.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_invoice_preview.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_job_status.xml" value="0.4478632478632479" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_lease.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_location_selection.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_make_add.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_messages.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_my_ads.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_new_password.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_notification.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_order.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_over_view_property.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_properties.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_rent_collection.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_rent_estimation.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_renter.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_renter_dashboard.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_renter_report.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_renter_unpaid_invoice.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_reports_profit.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_tenancy.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_tenant.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_tenant_contact.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_transaction.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_unit_preview.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/activity_welcome.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/ad_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/add_document_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/add_expense_layout_one.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/add_photo_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/adds_layout.xml" value="0.4569789674952199" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/building_items.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/contractor_invoice_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/contractor_rent_top_bar.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/create_folder_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_add_task.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_adds.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_advertise.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_building.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_chat.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_create_folder.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_documment_main.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_mark.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_post.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_set_reminder.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialog_unit.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/dialogue_rate_us.xml" value="0.10303548525010689" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/document_name_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/expense_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/folder_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_add_expense_two.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_basic_info.xml" value="0.33439693682195276" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_emergency_contact.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_first.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_fourth.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_lease.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_rent_payment.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_second.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/fragment_third.xml" value="0.21248396750748183" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/image_upload.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/image_upload_inspection.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/img_item.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/inspection_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/inventory_main_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/inventory_top_bar.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/job_complete_item.xml" value="0.33" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/lease_file_item.xml" value="0.25" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/new_password_dialog.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/notification_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/paegr_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/payment_detail_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/profile_item.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/property_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/side_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/task_item.xml" value="0.5" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/top_bar.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/top_bar_chat.xml" value="0.27291666666666664" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/top_bar_renter.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/layout/unit_preview_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1115" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/mipmap-anydpi-v26/ic_launcher_new.xml" value="0.1115" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/mipmap-anydpi-v26/ic_launcher_new_round.xml" value="0.1115" />
+        <entry key="..\:/Android Studio Projects/luck-rent/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1115" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/drawable/bg_add_photo.xml" value="0.154" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/acitivity_signup.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_accept.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_building.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_contact.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_expense.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_invoice.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_payment.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_pm.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_add_property.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_analytics_screen.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_application_form.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_audio_call.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_building_preview.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_buy_tenant_insurance.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_chat.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_choose.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_dashboard.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_invoice.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_job_complete.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_overview.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_rent_property.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_report.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_contractor_view_property.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_dashboard.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_expense_listing.xml" value="0.11584800741427248" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_find_trades_person.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_forget_password.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_inspection_entry.xml" value="0.11584800741427248" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_inspection_report.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_inventory.xml" value="0.11584800741427248" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_invoice_preview.xml" value="0.11584800741427248" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_job_status.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_language.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_lease.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_location_selection.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_my_ads.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_new_password.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_offline.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_order.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_otp_code.xml" value="0.33" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_over_view_property.xml" value="0.10379981464318813" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_properties.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_renter.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_renter_dashboard.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_renter_report.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_reports.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_reports_profit.xml" value="0.25" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_subscription.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_tenant_contact.xml" value="0.1" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_unit_preview.xml" value="0.10379981464318813" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/activity_welcome.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/add_photo_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/building_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/dialog_add_task.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/fragment_lease.xml" value="0.10379981464318813" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/image_upload_inspection.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/inspection_items.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/new_password_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/side_item.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/side_menu.xml" value="0.22402736212056434" />
+        <entry key="..\:/AndroidStudio/luck-rent/app/src/main/res/layout/view_property_dialog.xml" value="0.22402736212056434" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable-v24/ic_arrow_add.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/adds_dialogue.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/adds_drawable.xml" value="0.22685185185185186" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_add.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_audio.xml" value="0.2064814814814815" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_automatic.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_circle.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_dashboard_chart.xml" value="0.23055555555555557" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_dec_add.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_des.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_dottted_border.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_edit.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_edit_add.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_edit_add_details.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_image.xml" value="0.2064814814814815" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_land.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_language.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_notification.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_profile.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_role.xml" value="0.23703703703703705" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_search.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_topbar.xml" value="0.23055555555555557" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_type.xml" value="0.20833333333333334" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_view_application_btn.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/bg_white.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/circle_indicator.xml" value="0.1337719298245614" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/circle_outer_stroke.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_add_logo.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_add_right.xml" value="0.24074074074074073" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_arrow.xml" value="0.1935185185185185" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_back_btn.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_camera.xml" value="1.121875" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_circle.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_dashboard_name.xml" value="0.23055555555555557" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_data_import.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_landlord.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_location.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_loginbg.xml" value="0.24074074074074073" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_map_icon.xml" value="0.1935185185185185" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_mic1.xml" value="0.2064814814814815" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_new_unchecked.xml" value="0.23055555555555557" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_nexticon.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_orange_circle_open.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_resource_true.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_search.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_skip.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/ic_true_blue.xml" value="0.2890625" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/line.xml" value="0.22685185185185186" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/message_bg.xml" value="0.20462962962962963" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/picture_bg.xml" value="0.24025974025974026" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/reject_button.xml" value="0.15555555555555556" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/roundbutton.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/roundedbutton1.xml" value="0.24342105263157895" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/drawable/transparent_bg.xml" value="0.1712962962962963" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/acitivity_signup.xml" value="0.17" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_accept.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_add_contact.xml" value="0.26871794871794874" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_add_expense.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_add_invoice.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_add_payment.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_add_property.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_audio_call.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_buy_tenant_insurance.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_chat.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_choose.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_contractor_dashboard.xml" value="0.19814814814814816" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_contractor_invoice.xml" value="0.26871794871794874" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_contractor_job_complete.xml" value="0.19814814814814816" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_contractor_rent_property.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_description.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_details.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_expense_detail.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_expense_listing.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_faqs.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_forget_password.xml" value="0.11225364181662383" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_inspection_entry.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_inspection_report.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_inventory.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_invoice_detail.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_language.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_lease.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_location_selection.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_main.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_make_add.xml" value="0.28541666666666665" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_messages.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_my_ads.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_new_password.xml" value="0.18" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_notification.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_offline.xml" value="0.26871794871794874" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_open_camera.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_order.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_otp_code.xml" value="0.11225364181662383" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_over_view_property.xml" value="0.14270833333333333" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_payment_listing.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_properties.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_rate_us.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter.xml" value="0.11225364181662383" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter_dashboard.xml" value="0.19814814814814816" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter_new_properties.xml" value="0.26871794871794874" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter_payment.xml" value="0.1" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter_report.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_renter_unpaid_invoice.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_reports.xml" value="0.14444444444444443" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_reports_profit.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_request.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_splash.xml" value="0.11225364181662383" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_subscription.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_task_list.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_tenancy.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_tenant.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/activity_welcome.xml" value="0.21" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/add_document_dialog.xml" value="0.14444444444444443" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/add_expense_layout_one.xml" value="0.5" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/add_layout.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/add_size_dialog.xml" value="0.14444444444444443" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/adds_layout.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/contractor_invoice_items.xml" value="0.26871794871794874" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/contractor_rent_top_bar.xml" value="0.19814814814814816" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/dialog_additional_area.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/dialog_advertise.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/dialog_job_complete.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/dialog_set_reminder.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/dialogue_rate_us.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/expense_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_add_expense_f1.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_add_expense_two.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_basic_info.xml" value="0.17" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_emergency_contact.xml" value="0.15217391304347827" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_employment_detail.xml" value="0.15217391304347827" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_lease.xml" value="0.2" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_references.xml" value="0.14444444444444443" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/fragment_rent_payment.xml" value="0.3227722772277228" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/image_upload.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/inspection_items.xml" value="0.27291666666666664" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/inventory_top_bar.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/item_role.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/item_spinner.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/job_complete_item.xml" value="0.3227722772277228" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/messages_items.xml" value="0.33086876155268025" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/ms_back.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/my_adds_items.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/new_password_dialog.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/notification_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/paegr_item.xml" value="0.18" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/payment_detail_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/profile_item.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/property_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/property_size_item.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/reports_item.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/side_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/side_menu.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/simple_spinner_item.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar.xml" value="0.25" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar_chat.xml" value="0.33" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar_details.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar_makeadd.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar_myadd.xml" value="0.22982456140350876" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/top_bar_renter.xml" value="0.11225364181662383" />
+        <entry key="..\:/Kodex Projects/luck-rent/app/src/main/res/layout/view_property_dialog.xml" value="0.19814814814814816" />
+        <entry key="..\:/luck-rent/app/src/main/res/layout/activity_renter.xml" value="0.12631578947368421" />
+        <entry key="app/src/main/res/drawable/bg_add_photo.xml" value="0.16875" />
+        <entry key="app/src/main/res/drawable/bg_circle.xml" value="0.155984555984556" />
+        <entry key="app/src/main/res/drawable/bg_dashboard_chart.xml" value="0.155984555984556" />
+        <entry key="app/src/main/res/drawable/bg_date.xml" value="0.1046875" />
+        <entry key="app/src/main/res/drawable/bg_edit.xml" value="0.20717948717948717" />
+        <entry key="app/src/main/res/drawable/bg_right_left_top_corner.xml" value="0.20717948717948717" />
+        <entry key="app/src/main/res/drawable/bg_search.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/bg_search_2.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/bg_topbar.xml" value="0.1578125" />
+        <entry key="app/src/main/res/drawable/circle_outer_stroke.xml" value="0.1578125" />
+        <entry key="app/src/main/res/drawable/ic_add_bg.xml" value="0.155984555984556" />
+        <entry key="app/src/main/res/drawable/ic_arrow.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/ic_back_nav.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/ic_back_orange.xml" value="0.17083333333333334" />
+        <entry key="app/src/main/res/drawable/ic_blue_arrow.xml" value="0.1625" />
+        <entry key="app/src/main/res/drawable/ic_camera.xml" value="0.30375" />
+        <entry key="app/src/main/res/drawable/ic_forward.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/ic_grey_arrow.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/ic_mask_group.xml" value="0.17152777777777778" />
+        <entry key="app/src/main/res/drawable/ic_nexticon.xml" value="0.17083333333333334" />
+        <entry key="app/src/main/res/drawable/ic_white_back.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/drawable/notification_circle.xml" value="0.1578125" />
+        <entry key="app/src/main/res/drawable/roundbutton.xml" value="0.17083333333333334" />
+        <entry key="app/src/main/res/drawable/shadow.xml" value="0.155984555984556" />
+        <entry key="app/src/main/res/layout/acitivity_signup.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_accept.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/activity_add_contact.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_add_expense.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/activity_add_invoice.xml" value="0.13515625" />
+        <entry key="app/src/main/res/layout/activity_add_payment.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/activity_add_property.xml" value="0.261478163493841" />
+        <entry key="app/src/main/res/layout/activity_analytics_screen.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/activity_dashboard.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.11736111111111111" />
+        <entry key="app/src/main/res/layout/activity_edit_profile.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/activity_expense_detail.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/activity_expense_listing.xml" value="0.11736111111111111" />
+        <entry key="app/src/main/res/layout/activity_faqs.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_inspection_report.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/layout/activity_invoice_detail.xml" value="0.145703125" />
+        <entry key="app/src/main/res/layout/activity_language.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_lease.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_location_selection.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.145703125" />
+        <entry key="app/src/main/res/layout/activity_make_add.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/activity_messages.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/activity_my_ads.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_new_password.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.30493192588361934" />
+        <entry key="app/src/main/res/layout/activity_order.xml" value="0.11458333333333333" />
+        <entry key="app/src/main/res/layout/activity_over_view_property.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_payment_listing.xml" value="0.11736111111111111" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/activity_properties.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_renter.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_renter_dashboard.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_reports.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_reports_profit.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/activity_request.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/activity_subscription.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_task_list.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.11736111111111111" />
+        <entry key="app/src/main/res/layout/ad_dialog.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/ad_dialog_for_link.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/add_document_dialog.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/add_expense_layout_one.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/add_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/add_photo_dialog.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/add_size_dialog.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/adds_layout.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/analytics_top_bar.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/create_folder_dialog.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/custom_calender_layout.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/custom_marker_view.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/dialog_add_task.xml" value="0.15172101449275363" />
+        <entry key="app/src/main/res/layout/dialog_additional_area.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/expense_item.xml" value="0.14027777777777778" />
+        <entry key="app/src/main/res/layout/fragment_add_expense_two.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/fragment_basic_info.xml" value="0.14027777777777778" />
+        <entry key="app/src/main/res/layout/fragment_lease.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/fragment_references.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/fragment_rent_payment.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/image_new_upload.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/image_upload.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/img_item.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/item_role.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/lease_item.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/new_password_dialog.xml" value="0.182421875" />
+        <entry key="app/src/main/res/layout/notification_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/payment_detail_item.xml" value="0.13541666666666666" />
+        <entry key="app/src/main/res/layout/property_item.xml" value="0.13194444444444445" />
+        <entry key="app/src/main/res/layout/property_size_item.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/reports_item.xml" value="0.4547563805104408" />
+        <entry key="app/src/main/res/layout/side_item.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/side_menu.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/subscription_dialog.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/task_item.xml" value="0.22627737226277372" />
+        <entry key="app/src/main/res/layout/top_bar.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/top_bar_chat.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/top_bar_details.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/top_bar_makeadd.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/top_bar_myadd.xml" value="0.193359375" />
+        <entry key="app/src/main/res/layout/top_bar_renter.xml" value="0.193359375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

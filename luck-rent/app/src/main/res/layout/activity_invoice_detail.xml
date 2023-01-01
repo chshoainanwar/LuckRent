@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.invoice.InvoiceDetail">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dashboardDrawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="0dp"
+            android:fitsSystemWindows="true"
+
+            tools:openDrawer="end">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/topBar"
+                    layout="@layout/top_bar" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_below="@id/topBar"
+                    android:background="@drawable/ic_subscription_bg">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/tvRentalAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_horizontal"
+                            android:text="Rental Address: DHA 46 K Phase 1"
+                            android:textColor="@color/darkBlue"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/llBtn"
+                            android:layout_below="@+id/tvRentalAddress"
+                            android:fadeScrollbars="false"
+                            android:scrollbars="none">
+
+                            <RelativeLayout
+                                android:id="@+id/rlMain"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_10sdp">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlInvoiceRecpient"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginTop="@dimen/_7sdp">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llInvoice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvInvoiceTypeLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Invoice Type"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRecipientLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:paddingStart="@dimen/_25sdp"
+                                            android:text="Recipient"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llInvoiceDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llInvoice"
+
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvInvoiceType"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Rent"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvRecipient"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ellipsize="marquee"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:paddingStart="@dimen/_25sdp"
+                                            android:singleLine="true"
+                                            android:text="Deavang Tenant"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlItemRent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llInvoiceDetail"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="@drawable/bg_dashboard_chart"
+                                        android:backgroundTint="@color/light_orange"
+                                        android:padding="@dimen/_13sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:id="@+id/llItem"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".47"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="center_vertical"
+                                                android:inputType="text"
+                                                android:paddingStart="@dimen/_16sdp"
+                                                android:paddingEnd="@dimen/_16sdp"
+                                                android:singleLine="true"
+                                                android:text="+ITEM"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".05" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvItemAmount"
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".47"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="end|center_vertical"
+                                                android:inputType="text"
+                                                android:paddingStart="@dimen/_16sdp"
+                                                android:paddingEnd="@dimen/_16sdp"
+                                                android:singleLine="true"
+                                                android:text="Total: $16000"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:id="@+id/llRent"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:layout_below="@id/llItem"
+                                            android:layout_marginTop="-2dp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".54"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="center_vertical"
+                                                android:inputType="text"
+                                                android:paddingStart="@dimen/_16sdp"
+                                                android:paddingEnd="@dimen/_16sdp"
+                                                android:singleLine="true"
+                                                android:text="Rent Payment-Rent"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".05" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvRentAmount"
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".4"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="end|center_vertical"
+                                                android:inputType="text"
+                                                android:paddingStart="@dimen/_16sdp"
+                                                android:paddingEnd="@dimen/_16sdp"
+                                                android:singleLine="true"
+                                                android:text="$16000"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+                                    </RelativeLayout>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llCategory"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rlItemRent"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCategoryLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:gravity="center_vertical"
+                                            android:text="Category"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvInvoiceIssuedLabel"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_regular"
+                                            android:paddingStart="@dimen/_25sdp"
+                                            android:text="Invoice Issued"
+                                            android:textColor="@color/darkBlue"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llCategoryDetail"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llCategory"
+
+                                        android:orientation="horizontal"
+                                        android:weightSum="2">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCategory"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Rent"
+
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvIssueDate"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:ellipsize="marquee"
+
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:paddingStart="@dimen/_25sdp"
+                                            android:singleLine="true"
+                                            android:text="2021-09-01"
+                                            android:textColor="@color/darkSand"
+                                            android:textSize="@dimen/_13sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlAmountDue"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/llCategoryDetail"
+                                        android:layout_marginTop="@dimen/_14sdp"
+                                        android:background="@drawable/bg_dashboard_chart"
+                                        android:backgroundTint="@color/light_orange"
+                                        android:padding="@dimen/_10sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:id="@+id/llAmountDue"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_25sdp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".47"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="center_vertical"
+                                                android:inputType="text"
+
+                                                android:paddingEnd="@dimen/_16sdp"
+                                                android:singleLine="true"
+                                                android:text="Total Amount Due"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".05" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvAmountDue"
+                                                android:layout_width="0dp"
+                                                android:layout_height="@dimen/_30sdp"
+                                                android:layout_below="@+id/etBookedBy"
+                                                android:layout_gravity="center"
+                                                android:layout_weight=".47"
+                                                android:fontFamily="@font/poppins_semibold"
+                                                android:gravity="end|center_vertical"
+                                                android:inputType="text"
+                                                android:paddingStart="@dimen/_16sdp"
+
+                                                android:singleLine="true"
+                                                android:text="Total: $16000"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlNotes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/rlAmountDue"
+                                        android:layout_marginTop="@dimen/_25sdp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvNotesLabel"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_bold"
+                                            android:gravity="center_vertical"
+                                            android:singleLine="true"
+                                            android:text="Notes on Payment"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_12sdp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvNotes"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/tvNotesLabel"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_10sdp"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/poppins_medium"
+                                            android:gravity="center_vertical"
+                                            android:text="Non Taxable Lorem ipsum is a placeholder text commonly
+used to demonstrate the visual form of a
+document or a typeface without relying on
+meaningful content."
+                                            android:textColor="@color/Lightgrey"
+                                            android:textSize="@dimen/_12sdp" />
+
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </ScrollView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnDownload"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvPropertyAddress"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_weight=".5"
+                                android:background="@drawable/roundbutton"
+                                android:backgroundTint="@color/blueBtn"
+                                android:padding="10dp"
+                                android:text="Download"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnShare"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_below="@id/tvPropertyAddress"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_weight=".5"
+                                android:background="@drawable/roundbutton"
+                                android:padding="10dp"
+                                android:text="Share"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/dashboardNavView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:fitsSystemWindows="true">
+
+                <include
+
+                    android:id="@+id/dashboardNavMenuLayout"
+                    layout="@layout/side_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.navigation.NavigationView>
+
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+</layout>
